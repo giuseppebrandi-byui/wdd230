@@ -24,7 +24,6 @@ Large: 1.8
 --- 02 COLORS
 
 - Primary: #0571a7
-- Tints: #f8bd37
 
 - Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
@@ -96,7 +95,7 @@ footer {
 }
 
 .update {
-  color: #f8bd37;
+  color: #fff;
   font-size: 0.875rem;
 }
 
