@@ -23,7 +23,7 @@ Large: 1.8
 
 --- 02 COLORS
 
-- Primary: ##438db3
+- Primary: #0571a7
 - Tints: #f8bd37
 
 - Spacing system (px)
@@ -71,7 +71,7 @@ footer {
 
 header,
 footer {
-  background-color: #438db3;
+  background-color: #0571a7;
   color: #fff;
   border-radius: 0.75rem;
 }
