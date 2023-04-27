@@ -1,0 +1,28 @@
+@media only screen and (min-width: 32.5rem) {
+  .container {
+    padding: 0 3rem;
+    margin: 2rem auto;
+  }
+
+  .col-2 {
+    grid-template-columns: 1fr 2fr;
+    justify-items: normal;
+  }
+
+  header,
+  footer {
+    border-radius: 0.75rem;
+  }
+
+  header {
+    padding: 1.5rem 2rem;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  .author-photo {
+    width: 75%;
+  }
+}
