@@ -81,12 +81,12 @@ nav, footer {
   background-color: #002D13;
 }
 
-nav li {
+nav ul li {
   padding: 1rem 0;
   list-style: none;
 }
 
-nav li a {
+nav ul li a {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
@@ -95,7 +95,7 @@ nav li a {
   font-weight: 600;
 }
 
-nav li a:hover,
+nav ul li a:hover,
 .active {
   color: #FFC700;
 }
@@ -206,9 +206,6 @@ thead th {
 
 
 @media only screen and (max-width: 640px) {
-  /* table {
-    border: 3px solid #FFC700;
-  } */
 
   table thead tr {
     display: none;
@@ -233,9 +230,6 @@ thead th {
     float: left;
   }
 }
-
-/* font-family: 'DM Sans', sans-serif;
-font-family: 'Ubuntu', sans-serif; */
 
 .heading1,
 .heading2,

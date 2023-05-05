@@ -6,7 +6,7 @@
     justify-content:space-between;
   }
   
-  nav li a {
+  nav ul li a {
     padding: 0 2rem;
   }
 
