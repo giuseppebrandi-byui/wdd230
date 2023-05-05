@@ -95,8 +95,7 @@ nav ul li a {
   font-weight: 600;
 }
 
-nav ul li a:hover,
-.active {
+nav ul li a:hover {
   color: #FFC700;
 }
 
