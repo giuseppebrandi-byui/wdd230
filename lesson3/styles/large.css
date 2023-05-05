@@ -1,0 +1,9 @@
+@media only screen and (min-width: 48rem) {
+  nav li a {
+    padding: 0 3rem;
+  }
+
+  .logo-img {
+    width: 60%;
+  }
+}

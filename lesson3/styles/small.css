@@ -1,0 +1,271 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Light: 300
+Default: 400
+Medium: 500
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: #002D13 (cubumber)
+- Accent: #FFC700 (golden ginger)
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+--- 03 BORDER-RADIUS
+
+Default: .75rem
+*/
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.6;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+  max-width: 63.81em;
+  margin: 0 auto;
+}
+
+header, footer {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-img {
+  width: 70%;
+  margin: 2rem 0;
+}
+
+nav {
+  display: block;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+nav, footer {
+  background-color: #002D13;
+}
+
+nav li {
+  padding: 1rem 0;
+  list-style: none;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+nav li a:hover,
+.active {
+  color: #FFC700;
+}
+
+main {
+  padding: 0 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.target {
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+.personas {
+  margin-bottom: 2rem;
+}
+
+.persona-img {
+  width: 70%;
+  border-radius: 50%;
+}
+
+.personas h2,
+.scenarios h2 {
+  margin-bottom: 1rem;
+}
+
+.scenario {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.scenario span {
+  font-weight: bold;
+}
+
+.card {
+  border: 1px solid #002D13;
+  border-radius: .75rem;
+  background-color: #f1f3f5;
+  padding: 3rem 2rem;
+}
+
+.card picture {
+  display: inline-block;
+  text-align: center;
+}
+
+.colors-typography,
+.color-schema-typography {
+  margin-bottom: 2rem;
+}
+
+.sitemap-img {
+  width: 100%;
+}
+
+.sitemap h2,
+.color-schema-typography h2 {
+  margin-bottom: 1rem;
+}
+
+footer {
+  padding: 1.5rem;
+  color: #ffffff;
+}
+
+footer p {
+  font-size: 0.875rem;
+}
+
+
+/* Table */
+table {
+  border-collapse: collapse;
+  margin: 0;
+  width: 100%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .25);
+}
+
+table tr {
+  padding: .45em;
+}
+
+thead tr {
+  background-color: #FFC700;
+}
+
+table th,
+table td {
+  font-size: 1em;
+  padding: 1em;
+  text-align: center;
+  border: 1px solid #555555;
+}
+
+thead th {
+  color: #ffffff;
+  font-size: 1.15em;
+}
+
+
+@media only screen and (max-width: 640px) {
+  /* table {
+    border: 3px solid #FFC700;
+  } */
+
+  table thead tr {
+    display: none;
+  }
+
+  table tr {
+    display: block;
+  }
+
+  table th, table td {
+    padding: .5em;
+  }
+
+  table td {
+    text-align: right;
+    display: block;
+    font-size: 1em;
+  }
+
+  table td::before {
+    content: attr(data-title) ": ";
+    float: left;
+  }
+}
+
+/* font-family: 'DM Sans', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+
+.heading1,
+.heading2,
+.heading3 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.heading1 {
+  font-size: 2rem;
+}
+
+.heading2 {
+  font-size: 1.5rem;
+}
+
+.heading3 {
+  font-size: 1.17rem;
+}
+
+.site-header,
+.prim-nav,
+.foot-nav {
+  font-size: 0.875rem;
+}
+
+.prim-nav,
+.foot-nav {
+  color: #ffffff;
+}
+
+.cucumber {
+  background-color: #002D13;
+}

@@ -1,0 +1,21 @@
+@media only screen and (min-width: 42rem) {
+  nav {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+    justify-content:space-between;
+  }
+  
+  nav li a {
+    padding: 0 2rem;
+  }
+
+  .logo-img {
+    width: 50%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0;
+  }
+}
