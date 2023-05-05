@@ -4,12 +4,84 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test</title>
+    <meta name="author" content="Giuseppe Brandi" />
+    <meta
+      name="description"
+      content="A comprehensive list of lessons for the WDD 230 course that can help you shape your future."
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/medium.css" />
+    <title>WDD 230: Assignment Portal</title>
   </head>
+
   <body>
-    <h1>Testing and retesting</h1>
-    <a href="https://codepen.io/thesuccesscreed/pen/bGmwvgq"
-      >CodePen: Get Current Date</a
-    >
+    <div class="container">
+      <header class="col-2">
+        <img
+          src="images/giuseppe.jpg"
+          alt="Giuseppe Brandi's photo"
+          class="author-photo"
+        />
+        <h1>Giuseppe E. Brandi</h1>
+      </header>
+      <main>
+        <h2>WDD 230: Assignment Portal</h2>
+        <hr />
+        <ul>
+          <li>Lesson 02: <a class="lesson-link" href="#">Normalize CSS</a></li>
+          <li>
+            Lesson 03:
+            <a class="lesson-link" href="lesson3">Skipton Chamber of Commerce Site Plan</a>
+          </li>
+          <li>
+            Lesson 04: <a class="lesson-link" href="#">Responsive Layouts</a>
+          </li>
+          <li>
+            Lesson 05: <a class="lesson-link" href="#">Working with Layouts</a>
+          </li>
+          <li>
+            Lesson 06: <a class="lesson-link" href="#">Responsive Images</a>
+          </li>
+          <li>
+            Lesson 07:
+            <a class="lesson-link" href="#"
+              >An Image Gallery on the Discover Page</a
+            >
+          </li>
+          <li>Lesson 08: <a class="lesson-link" href="#">HTML Forms</a></li>
+          <li>
+            Lesson 09:
+            <a class="lesson-link" href="#">JSON and the Fetch() API</a>
+          </li>
+          <li>Lesson 10: <a class="lesson-link" href="#">Weather API</a></li>
+          <li>
+            Lesson 11:
+            <a class="lesson-link" href="#"
+              >Submit the Learning Project Website</a
+            >
+          </li>
+        </ul>
+        <hr />
+        <p>Some lessons may need more than one activity/assignment link.</p>
+      </main>
+      <footer>
+        <p>
+          @ <span id="current-year">Current Year</span> .:|:. Giuseppe E. Brandi
+          .:|:. Leeds, UK
+        </p>
+        <p class="update">
+          Last updated:
+          <span id="last-modified">20/04/1980 09:30:46</span>
+        </p>
+      </footer>
+    </div>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
