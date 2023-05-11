@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Giuseppe Brandi" />
+  <meta
+    name="description"
+    content="A comprehensive site plan for Skipton Chamber of Commerce. The site plan will contain information such as site purpose, personas, scenarios, color palette, font family details, and much more."
+  />
+  <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/medium.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <title>Skipton Chanber of Commerce</title>
+</head>
+
+<body>
+  
+  <header class="header">
+    <img src="images/logo_white_large.png" alt="Skipton Chamber of Commerce logo" class="logo">
+    <nav class="main-nav">
+      <ul class="main-nav-list">
+        <li><a class="main-nav-link" href="discover.html">Discover</a></li>
+        <li><a class="main-nav-link" href="directory.html">Directory</a></li>
+        <li><a class="main-nav-link" href="join.html">Join</a></li>
+        <li><a class="main-nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="social-media">
+      <a  href="#"><img class="social-media-icon" src="images/facebook.png" alt="facebook icon"></a>
+      <a  href="#"><img class="social-media-icon" src="images/linkedin.png" alt="facebook icon"></a>
+    </div>
+
+    <button class="btn-mobile-nav">
+      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+    </button>
+  </header>
+    
+    <main class="container grid">
+      <div class="card hero card--bg--purple">
+        <div>
+          <p class="card-title">Hero with site name and call to action</p>
+        </div>
+      </div>
+
+      <div class="card event card--bg--mustard">
+        <div>
+          <p class="card-title">Event</p>
+        </div>
+      </div>
+
+      <div class="card weather card--bg--lightgrey">
+        <div>
+          <p class="card-title">Weather</p>
+        </div>
+      </div>
+
+      <div class="card join card--bg--terracotta">
+        <div>
+          <p class="card-title">Join</p>
+        </div>
+      </div>
+
+      <div class="card news-release card--bg--purple">
+        <div>
+          <p class="card-title">News Release<p>
+        </div>
+      </div>
+
+      <div class="inner-grid card spotlights card--bg--palegreen">
+        <div class="box">
+          <p class="card-title">Spotlight 1</p>
+        </div>
+        <div class="box">
+          <p class="card-title">Spotlight 2</p>
+        </div>
+        <div class="box">
+          <p class="card-title">Spotlight 3</p>
+        </div>
+      </div>
+      
+  
+    </main>
+    
+    <footer>
+      <div class="container">
+        <div class="chamber-address">
+          <img src="images/logo-icon.png" class="logo-footer" alt="Skipton Chamber of Commerce">
+          <div>
+            <h3>Skipton Chamber of Commerce</h3>
+            <p>Skipton Town Hall, High Street,</p>
+            <p>Skipton, North Yorkshire, BD23 1FD</p>
+          </div>
+          <div>
+            <p>Email: chamber@skiptononline.co.uk</p>
+            <p>+44 01756 700553</p>
+            <p>Location Map</p>
+          </div>
+        </div>
+        <p class="project-details">
+          @ <span id="current-year">Current Year</span>  Skipton Chamber of Commerce | Giuseppe Brandi | WDD 230 Project | Last Modified: 
+        <span id="last-modified">20/04/1980 09:30:46</span></p>
+      </div>
+    </footer>
+
+  <script src="scripts/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

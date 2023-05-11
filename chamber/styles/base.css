@@ -1,0 +1,260 @@
+/*************************/
+/* GENERAL COMPONENTS */
+/*************************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #333333;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(25rem, auto);
+  gap: 1rem;
+}
+
+.spotlights .box {
+  background: #90ee90;
+  padding: 1rem;
+  border: 1px solid #9e9e9e;
+}
+
+.inner-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(15rem, auto);
+}
+
+
+/*************************/
+/* HEADER */
+/*************************/
+.logo {
+  height: 4rem;
+}
+
+.social-media-icon {
+  height: 3rem;
+  margin-left: 2rem;
+}
+
+.header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #002D13;
+}
+
+.header {
+  height: 9.6rem;
+  padding:0 4.8rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+
+/*************************/
+/* NAVIGATION */
+/*************************/
+.main-nav {
+  flex-grow: 1;
+}
+
+.main-nav-list {
+  list-style-type: none;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: end;
+  /* align-items: center; */
+  gap: 4rem;
+  margin-right: 5rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #ffc700; 
+}
+
+/* MOBILE NAVIGATION */
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #ffffff;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: block;
+  }
+
+  .icon-mobile-nav[name="close-outline"] {
+    display: none;
+  }
+
+  .main-nav {
+    background-color:#002D13;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5sec ease-in-out;
+
+    /* Hide visually the navigation */
+    opacity: 0;
+    /* Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+    /* Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+    align-items: center;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+
+/*************************/
+/* MAIN */
+/*************************/
+.card {
+  /* background: #979595; */
+  padding: 2rem 1.5rem;
+  border: 1px solid #9e9e9e;
+}
+
+.card--bg--purple {
+  background-color: #996888;
+}
+
+.card--bg--mustard {
+  background-color: #e1ad01;
+}
+.card--bg--palegreen {
+  background-color: #73a580;
+}
+
+.card--bg--lightgrey {
+  background-color: #979595;
+}
+
+.card--bg--terracotta {
+  background-color: #e2725d;
+}
+
+.card-title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.join {
+  display: none;
+}
+
+.spotlights div:nth-of-type(3) {
+  display: none;
+}
+
+/*************************/
+/* FOOTER */
+/*************************/
+footer {
+  margin-top: 2rem;
+  height: 18rem;
+  align-items:end;
+}
+
+/* footer .container {
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  width: 100%;
+} */
+
+.logo-footer {
+  height: 9rem;
+  margin-right: 1rem;
+}
+
+.project-details {
+  color: #ffffff;
+  padding: 2rem 4.8rem;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.chamber-address {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  color: #ffffff;
+  line-height: 1.6;
+  font-size: 1.5rem;
+}
