@@ -164,7 +164,7 @@ footer {
     /* Hide visually the navigation */
     opacity: 0;
     /* Make it unaccessible to mouse and keyboard */
-    /* pointer-events: none; */
+    /* pointer-events: auto; */
     /* Hide it from screen readers */
     visibility: hidden;
   }
@@ -227,7 +227,7 @@ footer {
 .card-title {
   font-weight: 500;
   font-size: 1.8rem;
-  color: #ffffff;
+  color: #222222;
 }
 
 .join {
