@@ -159,19 +159,19 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5sec ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     /* Hide visually the navigation */
     opacity: 0;
     /* Make it unaccessible to mouse and keyboard */
-    pointer-events: none;
+    /* pointer-events: none; */
     /* Hide it from screen readers */
     visibility: hidden;
   }
 
   .nav-open .main-nav {
     opacity: 1;
-    pointer-events: auto;
+    /* pointer-events: auto; */
     visibility: visible;
     transform: translateX(0);
   }
