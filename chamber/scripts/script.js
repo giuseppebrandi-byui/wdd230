@@ -2,9 +2,14 @@
 
 let date = new Date();
 let year = date.getFullYear();
+let fulldateUK = new Intl.DateTimeFormat("en-UK", {
+	dateStyle: "full"
+}).format(date);
 
 let currentYear = document.querySelector("#current-year");
 currentYear.textContent = year;
+
+let datefieldUK = document.querySelector('.date p');
 
 let lastModif = date[document.lastModified];
 
@@ -19,6 +24,8 @@ options = {
   hour12: false,
 };
 
+datefieldUK.innerHTML = `<em>${fulldateUK}</em>`;
+
 document.getElementById("last-modified").textContent = new Intl.DateTimeFormat(
   "en-GB",
   options
@@ -30,3 +37,4 @@ const headerEl = document.querySelector(".header");
 btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
+

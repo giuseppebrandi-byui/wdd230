@@ -70,10 +70,28 @@ footer {
 }
 
 .header {
-  height: 9.6rem;
-  padding:0 4.8rem;
+  height: 13.6rem;
+  padding: 2rem 4.8rem 0 4.8rem;
   margin-bottom: 2rem;
   position: relative;
+  flex-wrap: wrap;
+}
+
+.date {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #ffc8008d;
+  width: 100%;
+  text-align: center;
+}
+
+/* Inserting this collapsed row between two flex items will make 
+ * the flex item that comes after it break to a new row */
+.break {
+  flex-basis: 100%;
+  height: 0;
 }
 
 
@@ -87,9 +105,7 @@ footer {
 .main-nav-list {
   list-style-type: none;
   display: flex;
-  /* flex-direction: column; */
   justify-content: end;
-  /* align-items: center; */
   gap: 4rem;
   margin-right: 5rem;
 }
@@ -185,7 +201,6 @@ footer {
 /* MAIN */
 /*************************/
 .card {
-  /* background: #979595; */
   padding: 2rem 1.5rem;
   border: 1px solid #9e9e9e;
 }
@@ -228,33 +243,47 @@ footer {
 /*************************/
 footer {
   margin-top: 2rem;
-  height: 18rem;
+  padding: 4rem 0;
   align-items:end;
 }
 
-/* footer .container {
-  border-bottom: 1px solid rgba(255, 255, 255, .3);
-  width: 100%;
-} */
-
 .logo-footer {
-  height: 9rem;
+  height: 8rem;
   margin-right: 1rem;
 }
 
 .project-details {
   color: #ffffff;
-  padding: 2rem 4.8rem;
   font-size: 1.5rem;
   text-align: center;
   line-height: 1.6;
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  padding-top: 1rem;
 }
 
 .chamber-address {
   display: flex;
   align-items: center;
   justify-content:space-between;
+  flex-direction: column;
   color: #ffffff;
   line-height: 1.6;
   font-size: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
+.chamber-contact {
+  margin-top: 2rem;
+}
+
+.map-link {
+  color: #ffc700;
+  text-decoration: none;
+}
+
+.map-icon {
+  font-size: 2.5rem;
+  vertical-align: bottom;
+  margin-top: 1rem;
 }
