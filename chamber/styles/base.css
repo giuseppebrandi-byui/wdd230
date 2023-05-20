@@ -219,7 +219,7 @@ footer {
 
   .nav-open .main-nav {
     opacity: 1;
-    pointer-events: auto;
+    /* pointer-events: auto; */
     visibility: visible;
     transform: translateX(0);
     z-index: 100;
