@@ -1,103 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Giuseppe Brandi" />
-  <meta
-    name="description"
-    content="A comprehensive site plan for Skipton Chamber of Commerce. The site plan will contain information such as site purpose, personas, scenarios, color palette, font family details, and much more."
-  />
-  <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Giuseppe Brandi" />
+    <meta
+      name="description"
+      content="A comprehensive site plan for Skipton Chamber of Commerce. The site plan will contain information such as site purpose, personas, scenarios, color palette, font family details, and much more."
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/medium.css" />
     <link rel="stylesheet" href="styles/large.css" />
     <title>Skipton Chanber of Commerce</title>
-</head>
+  </head>
 
-<body>
-  
-  <header class="header">
-    <img src="images/logo_white_large.png" alt="Skipton Chamber of Commerce logo" class="logo">
-    <nav class="main-nav">
-      <ul class="main-nav-list">
-        <li><a class="main-nav-link" href="#">Discover</a></li>
-        <li><a class="main-nav-link" href="#">Directory</a></li>
-        <li><a class="main-nav-link" href="#">Join</a></li>
-        <li><a class="main-nav-link" href="#">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="social-media">
-      <a  href="https://web.facebook.com/profile.php?id=100066581593352" target="_blank"><img class="social-media-icon" src="images/facebook.png" alt="facebook icon"></a>
-      <a  href="https://www.linkedin.com/company/skipton-chamber-of-trade-and-commerce/about/" target="_blank"><img class="social-media-icon" src="images/linkedin.png" alt="linkedin icon"></a>
+  <body>
+    <div class="banner">
+      <p class="banner-message">
+        🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
+      </p>
     </div>
 
-    <button aria-label="Menu Button" class="btn-mobile-nav">
-      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-    </button>
+    <header class="header">
+      <img
+        src="images/logo_white_large.png"
+        alt="Skipton Chamber of Commerce logo"
+        class="logo"
+      />
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">Discover</a></li>
+          <li><a class="main-nav-link" href="#">Directory</a></li>
+          <li><a class="main-nav-link" href="#">Join</a></li>
+          <li><a class="main-nav-link" href="#">Contact</a></li>
+        </ul>
+      </nav>
 
-    <div class="break"></div> <!-- break -->
-    <div class="date">
-      <p>Thursday, 11 May 2023</p>
-    </div>
-  </header>
-    
+      <div class="social-media">
+        <a
+          href="https://web.facebook.com/profile.php?id=100066581593352"
+          target="_blank"
+          ><img
+            class="social-media-icon"
+            src="images/facebook.png"
+            alt="facebook icon"
+        /></a>
+        <a
+          href="https://www.linkedin.com/company/skipton-chamber-of-trade-and-commerce/about/"
+          target="_blank"
+          ><img
+            class="social-media-icon"
+            src="images/linkedin.png"
+            alt="linkedin icon"
+        /></a>
+      </div>
+
+      <button aria-label="Menu Button" class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+
+      <div class="break"></div>
+      <!-- break -->
+      <div class="date">
+        <p>Thursday, 11 May 2023</p>
+      </div>
+    </header>
+
     <main class="container grid">
-      <section class="card hero card--bg--purple">
+      <section class="hero">
+        <picture>
+          <img class="hero-img" src="images/skipton2.jpg" alt="Skipton tower" />
+        </picture>
+        <h1>Welcome to Skipton</h1>
+        <a href="#" class="cta-btn-hero">Become a Member</a>
+      </section>
+
+      <section class="card event">
         <div>
-          <h2 class="card-title">Hero with site name and call to action</h2>
+          <h2 class="card-title">Ribbon Cutting</h2>
+          <p class="info-text">
+            Join us for the grand opening of the Diamond Shack, Thursday at
+            1:00. Bring your friends and family members. pm.
+          </p>
+          <a class="more-info" href="#">More info</a>
         </div>
       </section>
 
-      <section class="card event card--bg--mustard">
-        <div>
-          <h2 class="card-title">Event</h2>
+      <section class="card weather">
+        <h2 class="card-title">Weather</h2>
+        <div class="weather-details">
+          <picture>
+            <img
+              class="weather-icon"
+              src="images/cloudy.png"
+              alt="cloudy sky image"
+            />
+          </picture>
+          <p class="temperature">14<span>&#8451;</span></p>
+        </div>
+        <p class="weather-type">Partly Cloudy</p>
+        <div class="speed">
+          <p>Wind Speed:</p>
+          <p>25km/h</p>
+        </div>
+        <div class="chill">
+          <p>Wind Chill:</p>
+          <p>N/A</p>
         </div>
       </section>
 
-      <section class="card weather card--bg--lightgrey">
+      <section class="card join">
         <div>
-          <h2 class="card-title">Weather</h2>
+          <p class="info-text">
+            Looking to grow your business and your network with expert support?
+            Join our chamber of commerce and take advantage of our experienced
+            consultant.
+          </p>
+          <a href="#" class="cta-btn">Join Us</a>
         </div>
       </section>
 
-      <section class="card join card--bg--terracotta">
-        <div>
-          <h2 class="card-title">Join</h2>
-        </div>
-      </section>
-
-      <section class="card news-release card--bg--purple">
+      <section class="card news-release">
         <div>
           <h2 class="card-title">News Release</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
+            quas repellendus inventore distinctio sapiente mollitia sint,
+            dignissimos velit esse voluptatum iste ab non voluptatibus nisi
+            libero adipisci quod at ea! Perferendis, impedit modi.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis
+            fuga, veritatis magnam eligendi harum dignissimos.
+          </p>
         </div>
       </section>
 
-      <section class="inner-grid card spotlights card--bg--palegreen">
+      <section class="inner-grid card spotlights">
         <div class="box">
-          <h2 class="card-title">Spotlight 1</h2>
+          <picture>
+            <img
+              class="spotlight1-logo"
+              src="images/webconsultantbuddy.png"
+              alt="Website consultant buddy's logo"
+            />
+          </picture>
+          <p class="info-text">
+            We can help you get online, quickly, simply, and affordably.
+          </p>
+          <a class="more-info" href="#">More info</a>
         </div>
         <div class="box">
-          <h2 class="card-title">Spotlight 2</h2>
+          <picture>
+            <img
+              class="spotlight2-logo"
+              src="images/courier.png"
+              alt="Express Way courier's logo"
+            />
+          </picture>
+          <p class="info-text">
+            Big or small, nothing is impossible with Express Way!
+          </p>
+          <a class="more-info" href="#">More info</a>
         </div>
         <div class="box">
-          <h2 class="card-title">Spotlight 3</h2>
+          <picture>
+            <img
+              class="spotlight2-logo"
+              src="images/vintage.png"
+              alt="Retro Smile Vintage Fashion's logo"
+            />
+          </picture>
+          <p class="info-text">
+            Live in the Past, Dress Like a Pro, Wear Vintage!
+          </p>
+          <a class="more-info" href="#">More info</a>
         </div>
       </section>
-      
-  
     </main>
-    
+
     <footer>
       <div class="container">
         <div class="chamber-address">
-          <img src="images/logo-icon.png" class="logo-footer" alt="Skipton Chamber of Commerce">
+          <img
+            src="images/logo-icon.png"
+            class="logo-footer"
+            alt="Skipton Chamber of Commerce"
+          />
           <div>
             <h3>Skipton Chamber of Commerce</h3>
             <p>Skipton Town Hall, High Street,</p>
@@ -106,16 +204,32 @@
           <div class="chamber-contact">
             <p>chamber@skiptononline.co.uk</p>
             <p>+44 01756700553</p>
-            <p><a href="https://www.google.com/maps/place/Skipton+Town+Hall/@53.9624099,-2.0180441,17z/data=!3m1!4b1!4m6!3m5!1s0x487bf395c99ee469:0x1d9d7538063806d9!8m2!3d53.9624099!4d-2.0154638!16s%2Fg%2F11cnpj20k1" target="_blank" class="map-link"><ion-icon name="location-outline" class="map-icon"></ion-icon> Location Map</a></p>
+            <p>
+              <a
+                href="https://www.google.com/maps/place/Skipton+Town+Hall/@53.9624099,-2.0180441,17z/data=!3m1!4b1!4m6!3m5!1s0x487bf395c99ee469:0x1d9d7538063806d9!8m2!3d53.9624099!4d-2.0154638!16s%2Fg%2F11cnpj20k1"
+                target="_blank"
+                class="map-link"
+                ><ion-icon name="location-outline" class="map-icon"></ion-icon>
+                Location Map</a
+              >
+            </p>
           </div>
         </div>
         <p class="project-details">
-          @ <span id="current-year">Current Year</span>  Skipton Chamber of Commerce | Giuseppe Brandi | WDD 230 Project | Last Modified: 
-        <span id="last-modified">20/04/1980 09:30:46</span></p>
+          @ <span id="current-year">Current Year</span> Skipton Chamber of
+          Commerce | Giuseppe Brandi | WDD 230 Project | Last Modified:
+          <span id="last-modified">20/04/1980 09:30:46</span>
+        </p>
       </div>
     </footer>
-  <script src="scripts/script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
+    <script src="scripts/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

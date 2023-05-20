@@ -3,13 +3,13 @@
 let date = new Date();
 let year = date.getFullYear();
 let fulldateUK = new Intl.DateTimeFormat("en-UK", {
-	dateStyle: "full"
+  dateStyle: "full",
 }).format(date);
 
 let currentYear = document.querySelector("#current-year");
 currentYear.textContent = year;
 
-let datefieldUK = document.querySelector('.date p');
+let datefieldUK = document.querySelector(".date p");
 
 let lastModif = date[document.lastModified];
 
@@ -38,3 +38,11 @@ btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
 
+// Display banner depending if it is a Monday or Tuesday
+let bannerEl = document.querySelector(".banner");
+let today = date.getDay();
+if (today === 1 || today === 2) {
+  bannerEl.style.display = "block";
+} else {
+  bannerEl.style.display = "none";
+}
