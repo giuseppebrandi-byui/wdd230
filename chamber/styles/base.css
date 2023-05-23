@@ -151,9 +151,7 @@ footer {
   list-style-type: none;
   display: flex;
   align-items: center;
-  /* justify-content: end; */
   gap: 4rem;
-  margin-right: 5rem;
 }
 
 .main-nav-link:link,
