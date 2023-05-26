@@ -31,7 +31,7 @@
 
     <header class="header">
       <img
-        src="images/logo_white_large.png"
+        src="images/logo_white_large.webp"
         alt="Skipton Chamber of Commerce logo"
         class="logo"
       />
@@ -78,10 +78,19 @@
     <main class="container grid">
       <section class="hero">
         <picture>
-          <img class="hero-img" src="images/skipton.jpg" alt="Skipton tower" />
+          <source
+            srcset="images/wdd230-medium.jpg"
+            media="(min-width:481px) and (max-width: 768px)"
+          />
+          <source srcset="images/wdd230-large.jpg" media="(min-width:769px)" />
+          <img
+            class="hero-img"
+            src="images/wdd230-small.jpg"
+            alt="Meeting taking place"
+          />
         </picture>
-        <h1>Welcome to Skipton</h1>
-        <a href="#" class="cta-btn-hero">Become a Member</a>
+        <!-- <h1>Welcome to Skipton</h1> -->
+        <!-- <a href="#" class="cta-btn-hero">Become a Member</a> -->
       </section>
 
       <section class="card event">
@@ -105,16 +114,16 @@
               alt="cloudy weather icon"
             />
           </picture>
-          <h3 class="temperature">14<span>&#8451;</span></h3>
+          <h3 class="temperature"><span>14</span>&#8451;</h3>
         </div>
         <p class="weather-type">Partly Cloudy</p>
         <div class="speed">
           <p>Wind Speed:</p>
-          <p>25km/h</p>
+          <p class="speed-value"><span>25</span>mph</p>
         </div>
         <div class="chill">
           <p>Wind Chill:</p>
-          <p>N/A</p>
+          <p class="chill-value">N/A</p>
         </div>
       </section>
 
@@ -196,7 +205,7 @@
       <div class="container">
         <div class="chamber-address">
           <img
-            src="images/logo-icon.png"
+            src="images/logo-icon.webp"
             class="logo-footer"
             alt="Skipton Chamber of Commerce"
           />
@@ -235,5 +244,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="scripts/windchill.js"></script>
   </body>
 </html>
