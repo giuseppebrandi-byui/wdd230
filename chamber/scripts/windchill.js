@@ -2,9 +2,9 @@ const speedValue = document.querySelector(".speed-value span");
 const tempValue = document.querySelector(".temperature span");
 const chillValue = document.querySelector(".chill-value");
 
-const temperatureF = 10;
+const temperatureF = 30;
 const temperatureC = Math.round(((temperatureF - 32) * 5) / 9);
-const windSpeed = 2;
+const windSpeed = 5;
 
 // Compute the wind chill value
 function calculateWindChill(temperatureF, windSpeed) {
