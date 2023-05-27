@@ -114,7 +114,7 @@ body {
 .header,
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #002d13;
 }
