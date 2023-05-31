@@ -1,0 +1,102 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: 
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+--- 03 BORDER-RADIUS
+
+Default: .75rem
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.6;
+}
+
+body,
+.author {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 18.75rem;
+}
+
+header {
+  padding: 1rem 0;
+  margin-bottom: 4rem;
+  text-align: center;
+  letter-spacing: 0.75px;
+}
+
+header,
+footer {
+  background-color: #ffc303;
+  color: #333333;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 1rem;
+}
+
+footer {
+  padding: 2rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  letter-spacing: 0.75px;
+}
+
+img.photo {
+  margin-bottom: 1rem;
+}
+
+picture img[data-src] {
+  filter: blur(0.2em);
+}
+
+picture img {
+  filter: blur(0em);
+  transition: filter 0.5s ease-in-out;
+}
