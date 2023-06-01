@@ -66,14 +66,17 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: minmax(25rem, auto);
   gap: 1rem;
 }
 
-/* .grid-cols-1 {
+.grid-cols-1 {
   grid-template-columns: 1fr;
-} */
+  grid-auto-rows: minmax(25rem, auto);
+}
+
+.grid-cols-1-stats {
+  grid-auto-rows: minmax(15rem, auto);
+}
 
 .inner-grid {
   display: grid;
@@ -465,6 +468,7 @@ picture img {
 .heading-discovery-page {
   text-align: center;
   margin-top: -1.25rem;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .skipton-facts {

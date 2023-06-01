@@ -13,10 +13,9 @@
     display: none;
   }
 
-  .grid {
+  .grid-cols-4 {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(15rem, auto);
-    gap: 1rem;
   }
 
   .inner-grid {
