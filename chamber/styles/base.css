@@ -445,6 +445,12 @@ footer {
 /* DISCOVERY PAGE */
 /*************************/
 
+.container-gallery {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 img.photo {
   margin-bottom: 1rem;
   width: 100%;
@@ -480,6 +486,10 @@ picture img {
 .stats {
   display: flex;
   align-items: center;
+}
+
+.stats-data {
+  font-size: 2rem;
 }
 
 .people-outline,
