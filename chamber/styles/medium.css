@@ -67,4 +67,12 @@
     height: 13.6rem;
     justify-content: space-between;
   }
+
+  .attraction {
+    transition: 0.3s ease-in-out;
+  }
+
+  .attraction:hover {
+    transform: scale(1.02);
+  }
 }
