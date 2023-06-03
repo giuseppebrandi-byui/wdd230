@@ -81,3 +81,39 @@ if ("IntersectionObserver" in window) {
     loadImages(img);
   });
 }
+
+//* Calculate Number of days between visits *//
+// milliseconds to days constant = 1000 ms/s * 60 s/m * 60 m/h * 24 h/day
+const msToDays = 84600000;
+
+// initialize display elements
+const daysElapsedDisplay = document.querySelector(".days-elapsed");
+const secondsElapsedDisplay = document.querySelector(".seconds-elapsed");
+
+// ms today since 1 Jan 1970
+const msToday = Date.now();
+
+// Get the stored VALUE for the msLastVisit-ls KEY in localStorage if it exists. If the msLastVisit KEY is missing, then assign 0 to the msLastVisit variable.
+let msLastVisit = Number(window.localStorage.getItem("msLastVisit-ls")) || 0;
+
+// Time elapsed in ms between last visit and today
+let msElapsed = msToday - msLastVisit;
+
+msLastVisit = msToday;
+
+// Compute number of days since last visit
+const daysElapsed = Math.round(msElapsed / msToDays);
+// Compute number of seconds since last visit
+const secElapsed = Math.round(msElapsed / 1000);
+
+// Determine if this is the first visit or display the number of days since the user last visited the site.
+if (msLastVisit !== 0) {
+  daysElapsedDisplay.textContent = daysElapsed;
+  secondsElapsedDisplay.textContent = secElapsed;
+} else {
+  daysElapsedDisplay.textContent = `This is your first visit on our website. 🥳 Welcome!`;
+  secondsElapsedDisplay.textContent = "n/a";
+}
+
+// Store the new msLastVisit into localStorage, key=msLastVisit-ls
+localStorage.setItem("msLastVisit-ls", msLastVisit);
