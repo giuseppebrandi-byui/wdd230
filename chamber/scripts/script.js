@@ -87,8 +87,8 @@ if ("IntersectionObserver" in window) {
 const msToDays = 84600000;
 
 // initialize display elements
-let daysElapsedDisplay = document.querySelector(".days-elapsed");
-let secondsElapsedDisplay = document.querySelector(".seconds-elapsed");
+const daysElapsedDisplay = document.querySelector(".days-elapsed");
+const secondsElapsedDisplay = document.querySelector(".seconds-elapsed");
 
 // ms today since 1 Jan 1970
 const msToday = Date.now();
@@ -102,9 +102,9 @@ let msElapsed = msToday - msLastVisit;
 msLastVisit = msToday;
 
 // Compute number of days since last visit
-const daysElapsed = Math.round(msElapsed / msToDays);
+let daysElapsed = Math.round(msElapsed / msToDays);
 // Compute number of seconds since last visit
-const secElapsed = Math.round(msElapsed / 1000);
+let secElapsed = Math.round(msElapsed / 1000);
 
 // Determine if this is the first visit or display the number of days since the user last visited the site.
 if (msLastVisit !== 0) {
