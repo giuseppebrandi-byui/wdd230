@@ -87,8 +87,8 @@ if ("IntersectionObserver" in window) {
 const msToDays = 84600000;
 
 // initialize display elements
-const daysElapsedDisplay = document.querySelector(".days-elapsed");
-const secondsElapsedDisplay = document.querySelector(".seconds-elapsed");
+let daysElapsedDisplay = document.querySelector(".days-elapsed");
+let secondsElapsedDisplay = document.querySelector(".seconds-elapsed");
 
 // ms today since 1 Jan 1970
 const msToday = Date.now();
