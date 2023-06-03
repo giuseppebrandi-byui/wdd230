@@ -94,7 +94,8 @@ const secondsElapsedDisplay = document.querySelector(".seconds-elapsed");
 const msToday = Date.now();
 
 // Get the stored VALUE for the msLastVisit-ls KEY in localStorage if it exists. If the msLastVisit KEY is missing, then assign 0 to the msLastVisit variable.
-let msLastVisit = Number(window.localStorage.getItem("msLastVisit-ls")) || 0;
+let msLastVisit =
+  Number(window.localStorage.getItem("msLastVisit-ls")) || msToday;
 
 // Time elapsed in ms between last visit and today
 let msElapsed = msToday - msLastVisit;
@@ -107,7 +108,7 @@ let daysElapsed = Math.round(msElapsed / msToDays);
 let secElapsed = Math.round(msElapsed / 1000);
 
 // Determine if this is the first visit or display the number of days since the user last visited the site.
-if (msLastVisit !== 0) {
+if (msElapsed !== 0) {
   daysElapsedDisplay.textContent = daysElapsed;
   secondsElapsedDisplay.textContent = secElapsed;
 } else {
