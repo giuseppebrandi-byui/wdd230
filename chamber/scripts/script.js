@@ -108,12 +108,14 @@ let daysElapsed = Math.round(msElapsed / msToDays);
 let secElapsed = Math.round(msElapsed / 1000);
 
 // Determine if this is the first visit or display the number of days since the user last visited the site.
-if (msElapsed !== 0) {
-  daysElapsedDisplay.textContent = daysElapsed;
-  secondsElapsedDisplay.textContent = secElapsed;
-} else {
-  daysElapsedDisplay.textContent = `This is your first visit on our website. 🥳 Welcome!`;
-  secondsElapsedDisplay.textContent = "n/a";
+if (daysElapsedDisplay !== null && secondsElapsedDisplay !== null) {
+  if (msElapsed !== 0) {
+    daysElapsedDisplay.textContent = daysElapsed;
+    secondsElapsedDisplay.textContent = secElapsed;
+  } else {
+    daysElapsedDisplay.textContent = `This is your first visit on our website. 🥳 Welcome!`;
+    secondsElapsedDisplay.textContent = "n/a";
+  }
 }
 
 // Store the new msLastVisit into localStorage, key=msLastVisit-ls
