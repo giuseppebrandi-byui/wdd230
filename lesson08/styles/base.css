@@ -2,12 +2,16 @@ html {
   font-family: sans-serif;
 }
 
+.title {
+  text-align: center;
+}
+
 table {
   border-collapse: collapse;
   border: 2px solid rgb(200, 200, 200);
   letter-spacing: 1px;
   font-size: 0.8rem;
-  margin: 5rem auto;
+  margin: 3rem auto;
 }
 
 td,
