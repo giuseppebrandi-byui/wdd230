@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Giuseppe Brandi" />
+    <meta
+      name="description"
+      content="A comprehensive site plan for Skipton Chamber of Commerce. The site plan will contain information such as site purpose, personas, scenarios, color palette, font family details, and much more."
+    />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Ubuntu:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/medium.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <title>Skipton Chanber of Commerce</title>
+  </head>
+
+  <body>
+    <div class="banner">
+      <p class="banner-message">
+        🤝🏼 Come join us for the chamber meet and greet Wednesday at 7:00 p.m.
+      </p>
+    </div>
+
+    <header class="header">
+      <a href="index.html"
+        ><img
+          src="images/logo_white_large.webp"
+          alt="Skipton Chamber of Commerce logo"
+          class="logo"
+      /></a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="index.html">Home</a></li>
+          <li><a class="main-nav-link" href="discover.html">Discover</a></li>
+          <li><a class="main-nav-link" href="#">Directory</a></li>
+          <li><a class="main-nav-link" href="#">Join</a></li>
+          <li><a class="main-nav-link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="social-media">
+        <a
+          href="https://web.facebook.com/profile.php?id=100066581593352"
+          target="_blank"
+          ><img
+            class="social-media-icon"
+            src="images/facebook.png"
+            alt="facebook icon"
+        /></a>
+        <a
+          href="https://www.linkedin.com/company/skipton-chamber-of-trade-and-commerce/about/"
+          target="_blank"
+          ><img
+            class="social-media-icon"
+            src="images/linkedin.png"
+            alt="linkedin icon"
+        /></a>
+      </div>
+
+      <button aria-label="Menu Button" class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+
+      <div class="break"></div>
+      <!-- break -->
+      <div class="date">
+        <p>Thursday, 11 May 2023</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="heading-join-us-page">
+        <h1>Become a Member</h1>
+      </section>
+
+      <section class="container">
+        <form method="get" action="thankyou.html">
+          <fieldset>
+            <legend>Applicant Information</legend>
+            <label class="top"
+              >First Name* <input type="text" name="fname" required
+            /></label>
+            <label class="top"
+              >Last Name* <input type="text" name="lname" required
+            /></label>
+            <!-- A business position title field of type text that is not required but only accepts alpha characters, hyphens, and spaces with a minimum of seven characters using a regular expressionLinks to an external site. pattern. -->
+            <label class="top">Title <input type="text" name="lname" /></label>
+            <label class="top"
+              >Email*
+              <input
+                type="mail"
+                name="mail"
+                placeholder="someone@gmail.com"
+                required
+            /></label>
+            <label class="top"
+              >Cell Phone*
+              <input type="tel" name="phone" placeholder="0123456789" required
+            /></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Business Information</legend>
+            <label class="top"
+              >Business Name* <input type="text" name="bname" required
+            /></label>
+            <label class="top"
+              >Business Description
+              <textarea rows="4" cols="50" name="bdescription">
+Enter text here...</textarea
+              >
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Membership Level</legend>
+            <label class="sbs"
+              ><input type="radio" name="membership" value="np" /> NP Membership
+            </label>
+            <label class="sbs"
+              ><input type="radio" name="membership" value="bronze" /> Bronze
+              Membership
+            </label>
+            <label class="sbs"
+              ><input type="radio" name="membership" value="silver" /> Silver
+              Membership
+            </label>
+            <label class="sbs"
+              ><input type="radio" name="membership" value="gold" /> Gold
+              Membership
+            </label>
+          </fieldset>
+
+          <input
+            type="submit"
+            value="Purchase My Membership"
+            class="submitBtn"
+          />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="chamber-address">
+          <img
+            src="images/logo-icon.webp"
+            class="logo-footer"
+            alt="Skipton Chamber of Commerce"
+          />
+          <div>
+            <h3>Skipton Chamber of Commerce</h3>
+            <p>Skipton Town Hall, High Street,</p>
+            <p>Skipton, North Yorkshire, BD23 1FD</p>
+          </div>
+          <div class="chamber-contact">
+            <p>chamber@skiptononline.co.uk</p>
+            <p>+44 01756700553</p>
+            <p>
+              <a
+                href="https://www.google.com/maps/place/Skipton+Town+Hall/@53.9624099,-2.0180441,17z/data=!3m1!4b1!4m6!3m5!1s0x487bf395c99ee469:0x1d9d7538063806d9!8m2!3d53.9624099!4d-2.0154638!16s%2Fg%2F11cnpj20k1"
+                target="_blank"
+                class="map-link"
+                ><ion-icon name="location-outline" class="map-icon"></ion-icon>
+                Location Map</a
+              >
+            </p>
+          </div>
+        </div>
+        <p class="project-details">
+          @ <span id="current-year">Current Year</span> Skipton Chamber of
+          Commerce | Giuseppe Brandi | WDD 230 Project | Last Modified:
+          <span id="last-modified">20/04/1980 09:30:46</span>
+        </p>
+      </div>
+    </footer>
+    <script src="scripts/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
