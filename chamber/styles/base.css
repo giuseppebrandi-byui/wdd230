@@ -526,7 +526,7 @@ form fieldset {
   padding: 1rem 2% 3rem;
 }
 
-form legend {
+form legend h2 {
   color: #000000;
   margin: 0 1rem;
   padding: 0 0.5rem;
