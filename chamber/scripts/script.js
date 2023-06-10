@@ -31,6 +31,11 @@ document.getElementById("last-modified").textContent = new Intl.DateTimeFormat(
   options
 ).format(lastModif);
 
+document.getElementById("last-modified").value = new Intl.DateTimeFormat(
+  "en-GB",
+  options
+).format(lastModif);
+
 // Make mobile navigation work
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");

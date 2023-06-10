@@ -541,11 +541,11 @@ form label.top {
   margin-bottom: 1rem;
 }
 
-form label.top input,
+form div label.top input,
 form label.top textarea {
   display: block;
   font-size: 1.825rem;
-  border: solid 1px #555555;
+  border: 1px solid #555555;
   border-radius: 4px;
   padding: 1.25rem;
   color: #333333;
@@ -577,12 +577,42 @@ form input.submitBtn:hover {
   cursor: pointer;
 }
 
-form label.top input:required {
-  border-left: #ffc700 solid 3px;
+.form-control {
+  position: relative;
 }
 
-form label.top input:required:valid {
-  border-left: #087f5b solid 3px;
+.form-control ion-icon {
+  position: absolute;
+  top: 46%;
+  right: 47%;
+  visibility: hidden;
+}
+
+.form-control small {
+  visibility: hidden;
+}
+
+.form-control.success input {
+  border-color: #087f5b;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control.success .checkmark-circle-outline {
+  visibility: visible;
+  color: #087f5b;
+}
+
+.form-control.error .alert-circle-outline {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: #e74c3c;
 }
 
 /*************************/
