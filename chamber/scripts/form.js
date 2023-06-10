@@ -7,8 +7,10 @@ const cellPhone = document.querySelector("#phone");
 const businessName = document.querySelector("#bname");
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  checkInputs();
+  // if all requirememnts are met then submit otherwise display error messages and prevent default
+  if (!checkInputs()) {
+    e.preventDefault();
+  }
 });
 
 function checkInputs() {
@@ -19,12 +21,15 @@ function checkInputs() {
   const emailValue = email.value.trim();
   const cellPhoneValue = cellPhone.value.trim();
   const businessNameValue = businessName.value.trim();
+  let isValid = true;
 
   if (firstNameValue === "") {
     // show error
     // add error class
     setErrorFor(firstName, "First name cannot be blank");
+    isValid = false;
   } else {
+    // Remove error class
     // add success class
     setSuccessFor(firstName);
   }
@@ -33,6 +38,7 @@ function checkInputs() {
     // show error
     // add error class
     setErrorFor(lastName, "Last name cannot be blank");
+    isValid = false;
   } else {
     // add success class
     setSuccessFor(lastName);
@@ -42,26 +48,28 @@ function checkInputs() {
     // show error
     // add error class
     setErrorFor(email, "Email cannot be blank");
+    isValid = false;
   } else if (!isEmail(emailValue)) {
     setErrorFor(email, "Not a valid email");
+    isValid = false;
   } else {
     // add success class
     setSuccessFor(email);
   }
 
-  if (titleValue === "") {
-    setSuccessFor(title);
-    // show error
-    // !isTitle(titleValue)
-    // add error class
-  } else if (!isTitle(titleValue)) {
-    setErrorFor(
-      title,
-      "The title should have minimum of 7 characters including letters, spaces, and hyphens"
-    );
+  if (titleValue !== "") {
+    if (!isTitle(titleValue)) {
+      setErrorFor(
+        title,
+        "The title should have minimum of 7 characters including letters, spaces, and hyphens"
+      );
+      isValid = false;
+    } else {
+      // add success class
+      setSuccessFor(title);
+    }
   } else {
-    // add success class
-    setSuccessFor(title);
+    // Remove class error when user decides to delete wrong entry
   }
 
   if (cellPhoneValue === "") {
@@ -77,10 +85,13 @@ function checkInputs() {
     // show error
     // add error class
     setErrorFor(businessName, "Business name cannot be blank");
+    isValid = false;
   } else {
     // add success class
     setSuccessFor(businessName);
   }
+
+  return isValid;
 }
 
 function setErrorFor(input, message) {
@@ -102,5 +113,5 @@ function isEmail(email) {
 }
 
 function isTitle(title) {
-  return /^[a-z,A-Z, ,-]{7,25}$/.test(title);
+  return /^[a-zA-Z -]{7,1024}$/.test(title);
 }

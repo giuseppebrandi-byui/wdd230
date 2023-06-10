@@ -95,7 +95,13 @@
             <div class="form-control">
               <label class="top"
                 >First Name*
-                <input type="text" name="fname" id="fname" required />
+                <input
+                  type="text"
+                  name="fname"
+                  placeholder="John"
+                  id="fname"
+                  required
+                />
               </label>
               <ion-icon
                 name="checkmark-circle-outline"
@@ -110,7 +116,13 @@
 
             <div class="form-control">
               <label class="top"
-                >Last Name* <input type="text" name="lname" id="lname" required
+                >Last Name*
+                <input
+                  type="text"
+                  name="lname"
+                  placeholder="Doe"
+                  id="lname"
+                  required
               /></label>
               <ion-icon
                 name="checkmark-circle-outline"
@@ -125,7 +137,12 @@
 
             <div class="form-control">
               <label class="top"
-                >Title <input type="text" name="lname" id="title"
+                >Title
+                <input
+                  type="text"
+                  name="title"
+                  placeholder="CEO MB-AB"
+                  id="title"
               /></label>
               <ion-icon
                 name="checkmark-circle-outline"
@@ -186,7 +203,12 @@
             <div class="form-control">
               <label class="top"
                 >Business Name*
-                <input type="text" name="bname" id="bname" required
+                <input
+                  type="text"
+                  name="bname"
+                  placeholder="XYZ Ltd"
+                  id="bname"
+                  required
               /></label>
               <ion-icon
                 name="checkmark-circle-outline"
@@ -205,10 +227,9 @@
                 rows="4"
                 cols="50"
                 name="bdescription"
+                placeholder="XYZ Ltd is a well established IT company..."
                 id="bdescription"
-              >
-Enter text here...</textarea
-              >
+              ></textarea>
             </label>
           </fieldset>
 
@@ -229,13 +250,14 @@ Enter text here...</textarea
               ><input type="radio" name="membership" value="gold" /> Gold
               Membership
             </label>
-            <input
-              type="hidden"
-              id="last-modified"
-              name="last-modified"
-              value="currentDateTime"
-            />
           </fieldset>
+
+          <input
+            type="hidden"
+            id="last-modified"
+            name="last-modified"
+            value="currentDateTime"
+          />
 
           <input
             type="submit"
