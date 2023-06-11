@@ -29,7 +29,6 @@ function checkInputs() {
     setErrorFor(firstName, "First name cannot be blank");
     isValid = false;
   } else {
-    // Remove error class
     // add success class
     setSuccessFor(firstName);
   }
@@ -115,3 +114,40 @@ function isEmail(email) {
 function isTitle(title) {
   return /^[a-zA-Z -]{7,1024}$/.test(title);
 }
+
+const npBenefits = document.querySelector(".np-benefits");
+const bronzeBenefits = document.querySelector(".bronze-benefits");
+const silverBenefits = document.querySelector(".silver-benefits");
+const goldBenefits = document.querySelector(".gold-benefits");
+
+const radioButtons = document.querySelectorAll("[name='membership']");
+const membershipWrapper = document.querySelector(".membership-wrapper");
+const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+function displayMembershipPackage(e) {
+  if (mediaQuery.matches) {
+    let clickedValue = e.target.value;
+    if (clickedValue === "np") {
+      npBenefits.classList.remove("is-hidden");
+    } else {
+      npBenefits.classList.add("is-hidden");
+    }
+    if (clickedValue === "bronze") {
+      bronzeBenefits.classList.remove("is-hidden");
+    } else {
+      bronzeBenefits.classList.add("is-hidden");
+    }
+    if (clickedValue === "silver") {
+      silverBenefits.classList.remove("is-hidden");
+    } else {
+      silverBenefits.classList.add("is-hidden");
+    }
+    if (clickedValue === "gold") {
+      goldBenefits.classList.remove("is-hidden");
+    } else {
+      goldBenefits.classList.add("is-hidden");
+    }
+  }
+}
+
+membershipWrapper.addEventListener("click", displayMembershipPackage);

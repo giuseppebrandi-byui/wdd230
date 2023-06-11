@@ -233,28 +233,81 @@
             </label>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="membership-wrapper">
             <legend><h2>Membership Level</h2></legend>
-            <label class="sbs"
-              ><input type="radio" name="membership" value="np" /> NP Membership
-            </label>
-            <label class="sbs"
-              ><input type="radio" name="membership" value="bronze" /> Bronze
-              Membership
-            </label>
-            <label class="sbs"
-              ><input type="radio" name="membership" value="silver" /> Silver
-              Membership
-            </label>
-            <label class="sbs"
-              ><input type="radio" name="membership" value="gold" /> Gold
-              Membership
-            </label>
+            <div class="membership-menu">
+              <label class="sbs"
+                ><input type="radio" name="membership" value="np" id="np" />
+                NP Membership
+              </label>
+              <label class="sbs"
+                ><input
+                  type="radio"
+                  name="membership"
+                  value="bronze"
+                  id="bronze"
+                />
+                Bronze Membership
+              </label>
+              <label class="sbs"
+                ><input
+                  type="radio"
+                  name="membership"
+                  value="silver"
+                  id="silver"
+                />
+                Silver Membership
+              </label>
+              <label class="sbs"
+                ><input type="radio" name="membership" value="gold" id="gold" />
+                Gold Membership
+              </label>
+            </div>
+
+            <div class="np-benefits is-hidden">
+              <h3>NP Membership - Free</h3>
+              <ul>
+                <li>Benefit 1</li>
+                <li>Benefit 2</li>
+                <li>Benefit 3</li>
+                <li>Benefit 4</li>
+              </ul>
+            </div>
+
+            <div class="bronze-benefits is-hidden">
+              <h3>Bronze Membership - £300 p.a</h3>
+              <ul>
+                <li>Benefit 1</li>
+                <li>Benefit 2</li>
+                <li>Benefit 3</li>
+                <li>Benefit 4</li>
+              </ul>
+            </div>
+
+            <div class="silver-benefits is-hidden">
+              <h3>Silver Membership - £500 p.a</h3>
+              <ul>
+                <li>Benefit 1</li>
+                <li>Benefit 2</li>
+                <li>Benefit 3</li>
+                <li>Benefit 4</li>
+              </ul>
+            </div>
+
+            <div class="gold-benefits is-hidden">
+              <h3>Gold Membership - £1000 p.a</h3>
+              <ul>
+                <li>Benefit 1</li>
+                <li>Benefit 2</li>
+                <li>Benefit 3</li>
+                <li>Benefit 4</li>
+              </ul>
+            </div>
           </fieldset>
 
           <input
             type="hidden"
-            id="last-modified"
+            class="last-modified"
             name="last-modified"
             value="currentDateTime"
           />

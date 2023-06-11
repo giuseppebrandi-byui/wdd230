@@ -615,6 +615,29 @@ form input.submitBtn:hover {
   color: #e74c3c;
 }
 
+.membership-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.np-benefits,
+.bronze-benefits,
+.silver-benefits,
+.gold-benefits {
+  padding: 2rem 3rem;
+  border: 1px solid #9e9e9e;
+}
+.np-benefits ul,
+.bronze-benefits ul,
+.silver-benefits ul,
+.gold-benefits ul {
+  padding-left: 3rem;
+}
+
+.is-hidden {
+  display: none;
+}
+
 /*************************/
 /* THANK YOU PAGE */
 /*************************/
