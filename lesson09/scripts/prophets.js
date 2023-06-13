@@ -48,7 +48,11 @@ const displayProphets = (prophets) => {
     card.appendChild(h2);
     card.appendChild(daybirth);
     card.appendChild(birthplace);
-    card.appendChild(death);
+    // Display date of death only for deceased prophets
+    if (death.textContent !== `Date of Death: null`) {
+      card.appendChild(death);
+    }
+
     card.appendChild(portrait);
   });
 };
