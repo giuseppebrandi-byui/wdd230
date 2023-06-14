@@ -19,7 +19,19 @@ const displayProphets = (prophets) => {
     let daybirth = document.createElement("p");
     let birthplace = document.createElement("p");
     let death = document.createElement("p");
+    let age = document.createElement("p");
     let portrait = document.createElement("img");
+
+    // Estract prophet's date of birth and death
+    let dob = `${prophet.birthdate}`;
+    let dod = `${prophet.death}`;
+
+    // Get year of prophet's birth and death
+    let birthyear = dob.slice(-4);
+    let deathyear = dod.slice(-4);
+
+    // Compute prophet's age
+    let prophetAge = Number(deathyear) - Number(birthyear);
 
     // Add class phophet-card to the section element
     card.classList.add("prophet-card");
@@ -27,11 +39,12 @@ const displayProphets = (prophets) => {
     // Add class prophet-img to the image element
     portrait.classList.add("prophet-img");
 
-    // Build the h2, Date of Birth, Place of Birth, and Date of Death content
+    // Build the h2, Date of Birth, Place of Birth, Date of Death, and age content
     h2.textContent = `${prophet.name} ${prophet.lastname}`;
-    daybirth.textContent = `Date of Birth: ${prophet.birthdate}`;
+    daybirth.textContent = `Date of Birth: ${dob}`;
     birthplace.textContent = `Place of Birth: ${prophet.birthplace}`;
-    death.textContent = `Date of Death: ${prophet.death}`;
+    death.textContent = `Date of Death: ${dod}`;
+    age.textContent = `Age: ${prophetAge}`;
 
     // Build the image portrait by setting all the relevant attribute
     portrait.setAttribute("src", prophet.imageurl);
@@ -48,11 +61,23 @@ const displayProphets = (prophets) => {
     card.appendChild(h2);
     card.appendChild(daybirth);
     card.appendChild(birthplace);
-    // Display date of death only for deceased prophets
+
+    // Get current year
+    const d = new Date();
+    let currentYear = d.getFullYear();
+
+    // Compute current age for the living prophet
+    let currentAge = Number(currentYear) - Number(birthyear);
+
+    // Display the date of death and age for the deceased prophets
     if (death.textContent !== `Date of Death: null`) {
       card.appendChild(death);
+      card.appendChild(age);
+    } else {
+      // Display the age of the living prophet
+      age.textContent = `Age: ${currentAge}`;
+      card.appendChild(age);
     }
-
     card.appendChild(portrait);
   });
 };
