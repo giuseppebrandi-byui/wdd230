@@ -18,10 +18,14 @@ h2 {
 
 body {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 16px;
   color: #333333;
   line-height: 1.6;
   font-family: "Source Sans 3", sans-serif;
+}
+
+main {
+  margin: 0 1rem;
 }
 
 header,
@@ -39,6 +43,7 @@ header {
   margin-bottom: 4rem;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   letter-spacing: 3px;
+  text-align: center;
 }
 
 footer {
@@ -49,12 +54,11 @@ footer {
 .container {
   max-width: 90em;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   justify-items: center;
   gap: 2rem;
 }
