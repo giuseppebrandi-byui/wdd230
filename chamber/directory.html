@@ -7,7 +7,7 @@
     <meta name="author" content="Giuseppe Brandi" />
     <meta
       name="description"
-      content="A thank you page for user to see that their details have been submitted"
+      content="The discover page contains statistical information about Skipton population and number of businesses and a gallery of places to see."
     />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="styles/normalize.css" />
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/medium.css" />
     <link rel="stylesheet" href="styles/large.css" />
-    <title>Skipton Chamber of Commerce | Thank you</title>
+    <title>Skipton Chamber of Commerce | Directory</title>
   </head>
 
   <body>
@@ -78,19 +78,21 @@
     </header>
 
     <main>
-      <section class="heading-thank-you-page">
-        <h1>Thank You for Providing Your Details</h1>
+      <section class="heading-directory-page">
+        <h1>Members Directory</h1>
+        <div class="switch-view-btn">
+          <button id="grid-btn">
+            <ion-icon name="grid-outline"></ion-icon>
+          </button>
+          <button id="list-btn">
+            <ion-icon name="list-outline"></ion-icon>
+          </button>
+        </div>
       </section>
-      <section class="thank-you-message">
-        <p>
-          We are delighted that you have chosen to become a member of the
-          Skipton Chamber of Commerce.
-        </p>
-        <p>
-          To discuss the benefits in more detail, one of our team members will
-          contact you as soon as possible.
-        </p>
-      </section>
+
+      <div class="container">
+        <div class="cards grid grid-cols-2 grid-cols-3"></div>
+      </div>
     </main>
 
     <footer>
@@ -128,6 +130,7 @@
       </div>
     </footer>
     <script src="scripts/script.js"></script>
+    <script src="scripts/directory.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

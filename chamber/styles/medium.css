@@ -75,4 +75,32 @@
   .attraction:hover {
     transform: scale(1.02);
   }
+
+  .form-control ion-icon {
+    right: 35%;
+  }
+
+  .list section {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    text-align: left;
+  }
+
+  .list h2 {
+    font-size: 1.5rem;
+  }
+
+  .list .company-logo {
+    display: none;
+  }
+
+  .address {
+    grid-row: 2 / 3;
+    margin-right: 2rem;
+  }
+
+  .weburl {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
 }
