@@ -5,7 +5,7 @@
       "address": "75 Main St, Skipton, BD23 1FD",
       "phone": "01756 700100",
       "url": "http://expressway.com",
-      "logo": "../images/courier.png",
+      "logo": "images/courier.png",
       "membership": "Gold Membership"
     },
     {
@@ -13,7 +13,7 @@
       "address": "Rawdon Park, Green Lane, Rawdon, Leeds, LS19 7BA",
       "phone": "01132 4353311",
       "url": "http://websiteconsultantbuddy.com",
-      "logo": "../images/webconsultantbuddy.png",
+      "logo": "images/webconsultantbuddy.png",
       "membership": "Gold Membership"
     },
     {
@@ -21,7 +21,7 @@
       "address": "Green House, Skipton, BD19 7BA",
       "phone": "01756 700144",
       "url": "http://retrosmile-vintagefashion.com",
-      "logo": "../images/vintage.png",
+      "logo": "images/vintage.png",
       "membership": "Silver Membership"
     },
     {
@@ -29,7 +29,7 @@
       "address": "16 Red Mills, Skipton, BD20 2FX",
       "phone": "01756 760200",
       "url": "http://ai-defender.com",
-      "logo": "../images/defender.png",
+      "logo": "images/defender.png",
       "membership": "Gold Membership"
     },
     {
@@ -37,7 +37,7 @@
       "address": "88 Compton Road, Skipton, BD10 2XX",
       "phone": "01756 435333",
       "url": "http://cyber-warrior.co.uk",
-      "logo": "../images/cyber.png",
+      "logo": "images/cyber.png",
       "membership": "Bronze Membership"
     },
     {
@@ -45,7 +45,7 @@
       "address": "77 White Tower, Skipton, BD27 7BA",
       "phone": "01756 700188",
       "url": "http://fairy-cupcakes.co.uk",
-      "logo": "../images/cupcakes.png",
+      "logo": "images/cupcakes.png",
       "membership": "Bronze Membership"
     },
     {
@@ -53,7 +53,7 @@
       "address": "2 Red Palace, Skipton, BD2 7AA",
       "phone": "01756 706128",
       "url": "http://cpg-legal.co.uk",
-      "logo": "../images/legal.png",
+      "logo": "images/legal.png",
       "membership": "Gold Membership"
     },
     {
@@ -61,7 +61,7 @@
       "address": "21 Sea Place, Skipton, BD21 7CA",
       "phone": "01756 000000",
       "url": "http://love-boat.co.uk",
-      "logo": "../images/loveboat.png",
+      "logo": "images/loveboat.png",
       "membership": "Silver Membership"
     },
     {
@@ -69,7 +69,7 @@
       "address": "7 Heaven Ways, Skipton, BD20 00A",
       "phone": "01756 003300",
       "url": "http://iron-minds.co.uk",
-      "logo": "../images/iron.png",
+      "logo": "images/iron.png",
       "membership": "NP Membership"
     }
   ]
