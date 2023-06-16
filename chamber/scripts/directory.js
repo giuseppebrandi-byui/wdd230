@@ -20,21 +20,23 @@ const displayCompanies = (companies) => {
     let name = document.createElement("h2");
     let address = document.createElement("p");
     let phone = document.createElement("p");
-    let weburl = document.createElement("p");
+    let weburl = document.createElement("a");
     let logo = document.createElement("img");
     let membership = document.createElement("p");
 
-    // Build the h2,...........................
+    // Populate the built elements with the business information
     name.textContent = `${company.name}`;
     address.textContent = `${company.address}`;
     phone.textContent = `${company.phone}`;
     weburl.textContent = `${company.url}`;
     membership.textContent = `${company.membership}`;
 
-    // Build the image...........
+    // Build the companies logo images and website link
     logo.setAttribute("src", company.logo);
     logo.setAttribute("alt", `${company.name}`);
     logo.setAttribute("loading", "lazy");
+    weburl.setAttribute("href", `${company.url}`);
+    weburl.setAttribute("target", "_blank");
 
     // Add class "business-card" to the section element
     card.classList.add("business-card");
