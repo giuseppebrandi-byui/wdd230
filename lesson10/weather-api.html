@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Giuseppe Brandi" />
+    <meta
+      name="description"
+      content="This is project based on the openweathermap API"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+    <title>Open Weather Map API</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>OpenWeatherMap.org API Test</h1>
+    </header>
+
+    <main class="container">
+      <section class="weather-info">
+        <h2>Fairbanks, Alaska</h2>
+        <div class="temperature-info">
+          <p>Current Temperature</p>
+          <h3><span id="current-temp"></span> &deg;F</h3>
+        </div>
+        <div class="condition-info">
+          <p>Current Condition</p>
+          <figure>
+            <img src="" alt="" id="weather-icon" />
+            <figcaption></figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        @ <span id="current-year">Current Year</span> | Giuseppe E. Brandi |
+        Last updated:
+        <span id="last-modified">20/04/1980 09:30:46</span>
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/weatherapi.js"></script>
+  </body>
+</html>
