@@ -28,31 +28,30 @@ function displayResults(weatherData) {
   const iconsrc = `https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@4x.png`;
   const desc = weatherData.weather[0].description;
   const windSpeed = weatherData.wind.speed.toFixed(1);
-  const windChill = calculateWindChill(temperatureF, windSpeed);
+  const windChill = calculateWindChill(temperatureC, windSpeed);
 
   weatherIcon.setAttribute("src", iconsrc);
   weatherIcon.setAttribute("alt", desc);
   weatherDescription.textContent = desc;
   speedValue.textContent = windSpeed;
-  chillValue.innerHTML = windChill;
+
+  if ((temperatureF <= 50) & (windSpeed > 3)) {
+    chillValue.innerHTML = `<span>${windChill}</span>&#8451;`;
+  } else {
+    chillValue.textContent = "N/A";
+  }
 }
 
 // Compute the wind chill value
 function calculateWindChill(temperatureF, windSpeed) {
-  if ((temperatureF <= 50) & (windSpeed > 3)) {
-    // Wind chill in Fahrenheit
-    const windChillF = Math.round(
-      35.74 +
-        0.6215 * temperatureF -
-        35.75 * windSpeed ** 0.16 +
-        0.4275 * temperatureF * windSpeed ** 0.16
-    );
-    // Wind chill in degrees Celsius
-    const windChillC = Math.round(((windChillF - 32) * 5) / 9);
-    return `<span>${windChillC}</span>&#8451;`;
-  } else {
-    return "N/A";
-  }
+  // Wind chill in degrees Celsius
+  const windChillC = Math.round(
+    13.12 +
+      0.6215 * temperatureF -
+      11.37 * windSpeed ** 0.16 +
+      0.3965 * temperatureF * windSpeed ** 0.16
+  );
+  return windChillC;
 }
 
 apiFetch();
