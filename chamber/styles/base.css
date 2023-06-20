@@ -308,6 +308,7 @@ footer {
 .temperature {
   font-size: 4rem;
   font-weight: 500;
+  margin-right: 6rem;
 }
 
 .weather-details {
