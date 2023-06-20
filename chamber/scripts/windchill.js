@@ -29,7 +29,6 @@ function displayResults(weatherData) {
   const desc = weatherData.weather[0].description;
   const windSpeed = weatherData.wind.speed.toFixed(1);
   const windChill = calculateWindChill(temperatureF, windSpeed);
-  console.log(windChill);
 
   weatherIcon.setAttribute("src", iconsrc);
   weatherIcon.setAttribute("alt", desc);

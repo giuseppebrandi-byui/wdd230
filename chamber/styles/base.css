@@ -91,7 +91,7 @@ body {
 .banner {
   color: #ffffff;
   font-weight: 500;
-  background-color: #099268;
+  background-color: #087f5b;
   width: 100%;
   padding: 1rem 0;
   text-align: center;
@@ -408,13 +408,24 @@ footer {
   margin-right: 1rem;
 }
 
-.project-details {
+.project-details,
+.openweathermap {
   color: #ffffff;
   font-size: 1.2rem;
   text-align: center;
   line-height: 1.6;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 1rem;
+}
+
+.openweathermap a:link,
+.openweathermap a:visited {
+  color: #ffc700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-details {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .chamber-address {
