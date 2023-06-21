@@ -67,7 +67,7 @@ h1 {
 }
 
 #weather-icon {
-  width: 6rem;
+  width: 35%;
 }
 
 figure {
@@ -81,6 +81,7 @@ figcaption {
   font-size: 1.17rem;
   font-weight: bold;
   text-transform: capitalize;
+  margin-right: 1.5rem;
 }
 
 footer {
