@@ -261,7 +261,7 @@ footer {
   color: #ffffff;
   font-family: "Ubuntu", sans-serif;
   font-size: 3.25rem;
-  text-shadow: 2px 2px 2px #333333;
+  text-shadow: 2px 3px 4px #333333;
 }
 
 .cta-btn-hero:link,
