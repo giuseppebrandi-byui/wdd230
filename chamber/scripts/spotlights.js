@@ -24,7 +24,15 @@ const displayCompanies = (companies) => {
 
   companies = shuffleArray(companies);
 
-  companies.forEach((company) => {
+  let filtered = companies.filter(
+    (company) =>
+      company.membership === "Gold Membership" ||
+      company.membership === "Silver Membership"
+  );
+  filtered = shuffleArray(filtered);
+  filtered = filtered.slice(0, 3);
+
+  filtered.forEach((company) => {
     // Create elements to add to the section.inner-grid element
     let box = document.createElement("div");
     let membership = document.createElement("h2");
@@ -56,12 +64,11 @@ const displayCompanies = (companies) => {
     learnMore.classList.add("more-info");
 
     // Append the section(box) with the created elements
-    if (`${company.membership}` === "Gold Membership") {
-      cards.appendChild(box);
-      box.appendChild(membership);
-      box.appendChild(logo);
-      box.appendChild(slogan);
-      box.appendChild(learnMore);
-    }
+
+    cards.appendChild(box);
+    box.appendChild(membership);
+    box.appendChild(logo);
+    box.appendChild(slogan);
+    box.appendChild(learnMore);
   });
 };
