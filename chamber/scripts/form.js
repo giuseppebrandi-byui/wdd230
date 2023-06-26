@@ -1,3 +1,4 @@
+// Become a member form constants
 const form = document.querySelector("#form");
 const firstName = document.querySelector("#fname");
 const lastName = document.querySelector("#lname");

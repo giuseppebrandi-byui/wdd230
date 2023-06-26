@@ -100,7 +100,8 @@ const secondsElapsedDisplay = document.querySelector(".seconds-elapsed");
 // ms today since 1 Jan 1970
 const msToday = Date.now();
 
-// Get the stored VALUE for the msLastVisit-ls KEY in localStorage if it exists. If the msLastVisit KEY is missing, then assign 0 to the msLastVisit variable.
+// Get the stored VALUE for the msLastVisit-ls KEY in localStorage if it exists.
+// If the msLastVisit KEY is missing, then assign 0 to the msLastVisit variable.
 let msLastVisit =
   Number(window.localStorage.getItem("msLastVisit-ls")) || msToday;
 

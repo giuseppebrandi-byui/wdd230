@@ -7,7 +7,7 @@
     <meta name="author" content="Giuseppe Brandi" />
     <meta
       name="description"
-      content="The Skipton Chamber of Trade and Commerce aims to promote all businesses in Skipton."
+      content="Should you need advice, help or just some great ideas for your business, please do not hesitate to drop us a line."
     />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="styles/normalize.css" />
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/medium.css" />
     <link rel="stylesheet" href="styles/large.css" />
-    <title>Skipton Chamber of Commerce</title>
+    <title>Skipton Chamber of Commerce | Contact Us</title>
   </head>
 
   <body>
@@ -77,98 +77,140 @@
       </div>
     </header>
 
-    <main class="container grid grid-cols-1 grid-cols-2 grid-cols-4">
-      <section class="hero">
-        <picture>
-          <source
-            srcset="images/skipton-medium.jpg"
-            media="(min-width:481px) and (max-width: 768px)"
-          />
-          <source srcset="images/skipton-large.jpg" media="(min-width:769px)" />
-          <img
-            class="hero-img"
-            src="images/skipton-small.jpg"
-            alt="Meeting taking place"
-          />
-        </picture>
-        <h1 class="hero-text">Welcome to Skipton</h1>
-        <a href="join.html" class="cta-btn-hero">Become a Member</a>
+    <main>
+      <section class="heading-contact-page">
+        <h1>Contact Us</h1>
       </section>
 
-      <section class="card event">
-        <div>
-          <h2 class="card-title">Ribbon Cutting</h2>
-          <p class="info-text">
-            Join us for the grand opening of the Diamond Shack, Thursday at
-            1:00. Bring your friends and family members. pm.
-          </p>
-          <a class="more-info" href="#">More info</a>
-        </div>
-      </section>
+      <section class="container">
+        <div class="grid-contact grid-cols-2">
+          <form
+            method="get"
+            action="receivedmessage.html"
+            id="form"
+            class="form"
+            novalidate
+          >
+            <fieldset>
+              <div class="form-control">
+                <label class="top"
+                  >Full Name*
+                  <input
+                    type="text"
+                    name="fullName"
+                    placeholder="John Doe"
+                    id="fullName"
+                    required
+                  />
+                </label>
+                <ion-icon
+                  name="checkmark-circle-outline"
+                  class="checkmark-circle-outline"
+                ></ion-icon>
+                <ion-icon
+                  name="alert-circle-outline"
+                  class="alert-circle-outline"
+                ></ion-icon>
+                <small>Error message</small>
+              </div>
 
-      <section class="card weather">
-        <h2 class="card-title">Weather</h2>
-        <div class="weather-details">
-          <picture>
-            <img
-              class="weather-icon"
-              src="images/cloudy.png"
-              alt="cloudy weather icon"
+              <div class="form-control">
+                <label class="top"
+                  >Email*
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="someone@gmail.com"
+                    id="email"
+                    required
+                /></label>
+                <ion-icon
+                  name="checkmark-circle-outline"
+                  class="checkmark-circle-outline"
+                ></ion-icon>
+                <ion-icon
+                  name="alert-circle-outline"
+                  class="alert-circle-outline"
+                ></ion-icon>
+                <small>Error message</small>
+              </div>
+
+              <div class="form-control">
+                <label class="top"
+                  >Phone*
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="0123456789"
+                    id="phone"
+                    required
+                /></label>
+                <ion-icon
+                  name="checkmark-circle-outline"
+                  class="checkmark-circle-outline"
+                ></ion-icon>
+                <ion-icon
+                  name="alert-circle-outline"
+                  class="alert-circle-outline"
+                ></ion-icon>
+                <small>Error message</small>
+              </div>
+
+              <div class="form-control">
+                <label class="top"
+                  >Message*
+                  <textarea
+                    rows="4"
+                    cols="50"
+                    name="user-message"
+                    placeholder="Your Message ..."
+                    id="user-message"
+                  ></textarea>
+                </label>
+                <ion-icon
+                  name="checkmark-circle-outline"
+                  class="checkmark-circle-outline"
+                ></ion-icon>
+                <ion-icon
+                  name="alert-circle-outline"
+                  class="alert-circle-outline"
+                ></ion-icon>
+                <small>Error message</small>
+              </div>
+            </fieldset>
+
+            <input
+              type="hidden"
+              id="date-time"
+              name="date-time"
+              value="currentDateTime"
             />
-          </picture>
-          <h3 class="temperature"><span>14</span>&#8451;</h3>
-        </div>
-        <p class="weather-type">Partly Cloudy</p>
-        <div class="speed">
-          <p>Wind Speed:</p>
-          <p class="speed-value"><span>25</span> mph</p>
-        </div>
-        <div class="chill">
-          <p>Wind Chill:</p>
-          <p class="chill-value">N/A</p>
-        </div>
-      </section>
 
-      <section class="card join">
-        <div>
-          <h2 class="card-title">Membership</h2>
-          <p class="info-text">
-            Looking to grow your business and your network with expert support?
-            Join our chamber of commerce and take advantage of our experienced
-            consultant.
-          </p>
-          <a href="join.html" class="cta-btn">Join Us</a>
-        </div>
-      </section>
+            <input type="submit" value="Send My Inquiry" class="submitBtn" />
+          </form>
+          <div class="contact-content">
+            <h2 class="visit-us">Visit Us</h2>
+            <p>Skipton Chamber of Commerce</p>
+            <p>Skipton Town Hall, High Street,</p>
+            <p>Skipton, North Yorkshire, BD23 1FD</p>
+            <p>+44 01756700553</p>
+            <p class="opening-hours">Monday – Friday: 9:00 AM to 4:30 PM</p>
 
-      <section class="card news-release">
-        <div>
-          <h2 class="card-title">News Release</h2>
-          <p>
-            <strong>Summary: </strong>Business problems are increasingly being
-            solved with cognitive technologies; indeed, many executives believe
-            artificial intelligence will substantially transform their
-            organizations within three years. Unfortunately, many AI projects
-            fail or encounter setbacks.
-          </p>
+            <p>
+              Please complete the contact form and a member of the Chamber
+              Executive committee will respond at the earliest opportunity.
+            </p>
+            <picture>
+              <img
+                src="images/chamber-map.jpg"
+                alt="map of Skipton Chamber of Commerce"
+                class="img-map"
+              />
+            </picture>
+          </div>
         </div>
-      </section>
-
-      <section class="inner-grid card spotlights">
-        <!-- CODE IS INJECTED FROM  spotlights.js -->
       </section>
     </main>
-
-    <div class="time-elapsed">
-      <p>
-        <span class="label">Number of days since your last visit: </span
-        ><span class="days-elapsed">0</span>
-      </p>
-      <p>
-        <span class="label">Number of seconds since your last visit: </span
-        ><span class="seconds-elapsed">n/a</span>
-      </p>
-    </div>
 
     <footer>
       <div class="container">
@@ -211,6 +253,7 @@
       </div>
     </footer>
     <script src="scripts/script.js"></script>
+    <script src="scripts/contact.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -219,7 +262,5 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="scripts/windchill.js"></script>
-    <script src="scripts/spotlights.js"></script>
   </body>
 </html>
