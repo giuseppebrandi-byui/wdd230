@@ -109,8 +109,8 @@ h3 {
   margin-bottom: 4.8rem;
 }
 
-.btn,
-.btn {
+.btn:link,
+.btn:visited {
   display: inline-block;
   color: #ffffff;
   text-decoration: none;
