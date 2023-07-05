@@ -25,7 +25,9 @@
 
   <body>
     <header class="header">
-      <img src="images/logo.png" alt="Bountiful Foods logo" class="logo" />
+      <a href="#"
+        ><img src="images/logo.png" alt="Bountiful Foods logo" class="logo"
+      /></a>
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="#">Home</a></li>
@@ -79,14 +81,300 @@
         </div>
       </section>
 
-      <section class="container">
-        <div class="section-what-we-offer grid grid--4-cols">
-          <!-- <div>Test 1</div>
-          <div>Test 2</div>
-          <div>Test 3</div>
-          <div>Test 4</div> -->
+      <section class="what-we-offer">
+        <div class="container">
+          <h2 class="heading-secondary">What We Offer</h2>
+        </div>
+        <div class="container grid grid--1-cols grid--2-cols grid--4-cols">
+          <div class="card fruit-juice">
+            <picture>
+              <img
+                src="images/fruit-drinks.jpg"
+                alt="Delicious fruit juices"
+                class="product-img"
+                loading="lazy"
+              />
+            </picture>
+            <h3>Fruit Juices</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam totam
+              doloribus, cupiditate numquam quidem repellendus?
+            </p>
+            <a href="#">Order Now</a>
+          </div>
+          <div class="card fruit-pack">
+            <picture>
+              <img
+                src="images/fruit-pack.jpg"
+                alt="Mouth watering fruit packs"
+                class="product-img"
+                loading="lazy"
+              />
+            </picture>
+            <h3>Fruit Packs</h3>
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam totam
+              doloribus, cupiditate numquam quidem repellendus?
+            </p>
+            <a href="#">Order Now</a>
+          </div>
+          <div class="card produce">
+            <picture>
+              <img
+                src="images/produce.jpg"
+                alt="Fresh and organic vegetables"
+                class="product-img"
+                loading="lazy"
+              />
+            </picture>
+            <div>
+              <h3>Produce</h3>
+              <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                totam doloribus, cupiditate numquam quidem repellendus?
+              </p>
+              <a href="#">Order Now</a>
+            </div>
+          </div>
+          <div class="card my-order">
+            <h3 class="order-title">Your Order</h3>
+            <div class="inner-card">
+              <div class="product">
+                <p>1 x Strawberries, Banana</p>
+                <p>$3.00</p>
+              </div>
+              <div class="product">
+                <p>2 x Kiwi, Lemon</p>
+                <p>$6.00</p>
+              </div>
+              <div class="product">
+                <p>1 x Apple, Banana.</p>
+                <p>$3.00</p>
+              </div>
+              <div class="delivery-fee">
+                <p>Delivery Fee:</p>
+                <p>$0.00</p>
+              </div>
+              <div class="total">
+                <p>Total:</p>
+                <p>$12.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="carlsbad-section">
+        <div class="container">
+          <h2 class="heading-secondary">About Carlsbad</h2>
+        </div>
+        <div class="about-carlsbad container grid grid--2-cols">
+          <picture>
+            <img
+              src="images/carlsbad.jpg"
+              alt="Carlsbad beach"
+              class="carlsbad-img"
+              loading="lazy"
+            />
+          </picture>
+          <div class="carlsbad-description">
+            <h3>Close to perfection</h3>
+            <p>
+              Known for its world-class resorts and near-perfect weather,
+              Carlsbad has it all.
+            </p>
+            <p>
+              With an international theme park and an international golf
+              capital, it has been dubbed the golf capital of the world.
+            </p>
+            <p>
+              Indeed, Carlsbad is a great place to live, with miles of beaches,
+              an extensive variety of housing options, superb shopping
+              experience, and a world-class public library.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="delivery-section">
+        <div class="container">
+          <h2 class="heading-secondary">Delivery Service</h2>
+        </div>
+        <div class="delivery container grid grid--2-cols">
+          <div class="delivery-description">
+            <h3>To your door</h3>
+            <p>
+              Whether you're at home or at work, Bountiful Foods will deliver
+              your order the same day you place it.
+            </p>
+            <p>
+              You can submit your order through our website or the Bountiful
+              Foods App; however, the app offers real-time order tracking.
+            </p>
+            <p>
+              Our door-to-door delivery service is very efficient, and for
+              orders over $10.00, it's free. A fee of $2.00 is normally charged
+              for smaller orders.
+            </p>
+          </div>
+          <picture>
+            <img
+              src="images/truck.jpg"
+              alt="Carlsbad beach"
+              class="truck-img"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <section class="weather-section">
+        <div class="container">
+          <div class="card weather grid grid--1-cols grid--3-cols">
+            <div class="inner-card">
+              <h3 class="card-title">MONDAY</h3>
+              <div class="weather-details">
+                <picture>
+                  <img
+                    class="weather-icon"
+                    src="images/cloudy.png"
+                    alt="overcast clouds"
+                  />
+                </picture>
+                <h4 class="temperature"><span>16</span>℃</h4>
+              </div>
+              <p class="weather-type">overcast clouds</p>
+              <div class="speed">
+                <p>Wind Speed:</p>
+                <p class="speed-value"><span>5.4</span> mph</p>
+              </div>
+              <div class="humidity">
+                <p>Humidity:</p>
+                <p class="humidity-value"><span>40</span>%</p>
+              </div>
+            </div>
+            <div class="inner-card">
+              <h3 class="card-title">TUESDAY</h3>
+              <div class="weather-details">
+                <picture>
+                  <img
+                    class="weather-icon"
+                    src="images/cloudy.png"
+                    alt="overcast clouds"
+                  />
+                </picture>
+                <h4 class="temperature">16<span>℃</span></h4>
+              </div>
+              <p class="weather-type">overcast clouds</p>
+              <div class="speed">
+                <p>Wind Speed:</p>
+                <p class="speed-value"><span>5.4</span> mph</p>
+              </div>
+              <div class="humidity">
+                <p>Humidity:</p>
+                <p class="humidity-value"><span>40</span>%</p>
+              </div>
+            </div>
+            <div class="inner-card">
+              <h3 class="card-title">WEDNESDAY</h3>
+              <div class="weather-details">
+                <picture>
+                  <img
+                    class="weather-icon"
+                    src="images/cloudy.png"
+                    alt="overcast clouds"
+                  />
+                </picture>
+                <h4 class="temperature"><span>16</span>℃</h4>
+              </div>
+              <p class="weather-type">overcast clouds</p>
+              <div class="speed">
+                <p>Wind Speed:</p>
+                <p class="speed-value"><span>5.4</span> mph</p>
+              </div>
+              <div class="humidity">
+                <p>Humidity:</p>
+                <p class="humidity-value"><span>40</span>%</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo"
+            ><img src="images/logo.png" alt="Bountiful Foods logo" class="logo"
+          /></a>
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#" target="_blank"
+                ><img
+                  class="social-media-icon-footer"
+                  src="images/facebook-icon.png"
+                  alt="facebook icon"
+              /></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#" target="_blank"
+                ><img
+                  class="social-media-icon-footer"
+                  src="images/twitter-icon.png"
+                  alt="twitter icon"
+              /></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#" target="_blank"
+                ><img
+                  class="social-media-icon-footer"
+                  src="images/instagram-icon.png"
+                  alt="instagram icon"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact Us</p>
+          <address class="contacts">
+            <p class="address">623 Harrison St., Carlsbad, CA 92009</p>
+            <p>
+              <a class="footer-link" href="tel:760-827-8916">760-827-8916</a
+              ><br /><a
+                class="footer-link"
+                href="mailto:info@bountiful-foods.com"
+                >info@bountiful-foods.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create Account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Us</a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Help Center</a></li>
+            <li><a class="footer-link" href="#">Recipes</a></li>
+            <li><a class="footer-link" href="#">Privacy Terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>

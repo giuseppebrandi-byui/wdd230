@@ -92,6 +92,11 @@ h3 {
   margin-bottom: 3.2rem;
 }
 
+.heading-secondary {
+  font-size: 3.6rem;
+  margin-bottom: 4.8rem;
+}
+
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -129,8 +134,8 @@ h3 {
   gap: 5rem;
 }
 
-.grid--4-cols {
-  grid-template-columns: 1fr 1fr 1fr 1.5fr;
+.grid--1-cols {
+  grid-template-columns: 1fr;
 }
 
 /************************/
@@ -157,6 +162,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 3.2rem;
+  text-transform: uppercase;
 }
 
 .main-nav-link:link,
@@ -164,8 +170,8 @@ h3 {
   text-decoration: none;
   color: #333333;
   font-weight: 600;
-  font-size: 2rem;
-  transition: all 0.3rem;
+  font-size: 1.8rem;
+  transition: all 0.3s;
 }
 
 .main-nav-link:hover,
@@ -180,10 +186,11 @@ h3 {
 .section-hero {
   background-color: #e9fcec;
   padding: 4.8rem 0 9.6rem 0;
+  margin-bottom: 9.6rem;
 }
 
 .hero {
-  max-width: 130rem;
+  max-width: 120rem;
   margin: 0 auto;
   padding: 0 3.2rem;
   display: grid;
@@ -211,6 +218,208 @@ h3 {
 /****************************/
 /*  WHAT WE OFFER SECTION   */
 /****************************/
-.section-what-we-offer {
+.what-we-offer {
+  padding: 0 0 9.6rem 0;
+}
+
+.product-img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.inner-card {
+  padding: 1rem;
+  border: 1px solid #ced4da;
+  font-size: 1.6rem;
+}
+
+.card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.card a:link,
+.card a:visited {
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #333333;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.card a:hover,
+.card a:active {
+  color: #cf711f;
+}
+
+.description {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.product,
+.delivery-fee,
+.total {
+  display: flex;
+  justify-content: space-between;
+  line-height: 2;
+}
+
+.order-title {
+  color: #cf711f;
+}
+
+/****************************/
+/*  ABOUT CARLSBAD          */
+/****************************/
+
+.carlsbad-img,
+.truck-img {
+  width: 100%;
+}
+
+.carlsbad-description h3,
+.delivery-description h3 {
+  color: #cf711f;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.carlsbad-description p,
+.delivery-description p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.carlsbad-section,
+.delivery-section,
+.weather-section {
+  padding: 0 0 9.6rem 0;
+}
+
+/****************************/
+/*  WEATHER SECTION         */
+/****************************/
+
+.card-title h3 {
+  margin-bottom: 2rem;
+}
+
+.inner-card {
+  padding: 2rem;
+  text-align: center;
+}
+.temperature {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 3rem;
+}
+
+.weather-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.weather-icon {
+  width: 75%;
+}
+
+.weather-type {
+  font-size: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #555555;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+.speed {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.humidity {
+  display: flex;
+  justify-content: space-between;
+}
+
+/****************************/
+/*  FOOTER SECTION          */
+/****************************/
+.footer {
   padding: 9.6rem 0;
+  background-color: #e9fcec;
+  border-top: 1px solid #eeeeee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-media-icon-footer {
+  height: 4rem;
+}
+
+/* .social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+} */
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #333333;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #cf711f;
 }

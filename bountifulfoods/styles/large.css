@@ -1,0 +1,27 @@
+@media only screen and (min-width: 75em) {
+  .grid--2-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid--4-cols {
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+  }
+
+  .carlsbad-description p,
+  .delivery-description p {
+    line-height: 1.8;
+    margin-bottom: 1.6rem;
+  }
+
+  .hero {
+    max-width: 140rem;
+  }
+
+  .container {
+    max-width: 130rem;
+  }
+
+  .heading-primary {
+    font-size: 5.2rem;
+  }
+}
