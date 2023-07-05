@@ -28,6 +28,7 @@
       <a href="#"
         ><img src="images/logo.png" alt="Bountiful Foods logo" class="logo"
       /></a>
+
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="#">Home</a></li>
@@ -44,17 +45,22 @@
         /></a>
         <a href="#" target="_blank"
           ><img
-            class="social-media-icon"
+            class="social-media-icon twitter"
             src="images/twitter-icon.png"
             alt="twitter icon"
         /></a>
         <a href="#" target="_blank"
           ><img
-            class="social-media-icon"
+            class="social-media-icon instagram"
             src="images/instagram-icon.png"
             alt="instagram icon"
         /></a>
       </div>
+
+      <button aria-label="Menu Button" class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
     </header>
 
     <main>
@@ -140,24 +146,13 @@
             <h3 class="order-title">Your Order</h3>
             <div class="inner-card">
               <div class="product">
-                <p>1 x Strawberries, Banana</p>
-                <p>$3.00</p>
+                <p>1 x Strawberries, Banana, Lemon</p>
               </div>
               <div class="product">
                 <p>2 x Kiwi, Lemon</p>
-                <p>$6.00</p>
               </div>
               <div class="product">
                 <p>1 x Apple, Banana.</p>
-                <p>$3.00</p>
-              </div>
-              <div class="delivery-fee">
-                <p>Delivery Fee:</p>
-                <p>$0.00</p>
-              </div>
-              <div class="total">
-                <p>Total:</p>
-                <p>$12.00</p>
               </div>
             </div>
           </div>
@@ -306,7 +301,10 @@
       <div class="container grid grid--footer">
         <div class="logo-col">
           <a href="#" class="footer-logo"
-            ><img src="images/logo.png" alt="Bountiful Foods logo" class="logo"
+            ><img
+              src="images/logo-footer.png"
+              alt="Bountiful Foods logo"
+              class="logo-footer"
           /></a>
           <ul class="social-links">
             <li>
@@ -376,5 +374,14 @@
         </nav>
       </div>
     </footer>
+    <script src="scripts/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

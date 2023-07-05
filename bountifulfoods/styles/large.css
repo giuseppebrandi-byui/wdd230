@@ -7,6 +7,10 @@
     grid-template-columns: 1fr 1fr 1fr 1.5fr;
   }
 
+  .grid {
+    gap: 5rem;
+  }
+
   .carlsbad-description p,
   .delivery-description p {
     line-height: 1.8;
@@ -15,6 +19,7 @@
 
   .hero {
     max-width: 140rem;
+    gap: 9.6rem;
   }
 
   .container {
@@ -23,5 +28,13 @@
 
   .heading-primary {
     font-size: 5.2rem;
+  }
+
+  .header {
+    padding: 0 4.8rem;
+  }
+
+  .main-nav-list {
+    gap: 4.8rem;
   }
 }

@@ -11,7 +11,55 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .heading-primary {
-    font-size: 4.4rem;
+  .grid--footer {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  }
+
+  .grid {
+    gap: 4.8rem;
+  }
+
+  .header {
+    flex-direction: row;
+    height: 9.6rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 3.2rem;
+    gap: 4.8rem;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  .hero-text-box {
+    text-align: left;
+  }
+
+  .hero-img-box {
+    text-align: right;
+  }
+
+  .btn-mobile-nav {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: row;
+    gap: 3.2rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 1.6rem;
+  }
+
+  .logo-col,
+  .address-col,
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 1;
   }
 }
