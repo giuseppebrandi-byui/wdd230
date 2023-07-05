@@ -42,6 +42,10 @@
     text-align: right;
   }
 
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
   .btn-mobile-nav {
     display: none;
   }

@@ -84,7 +84,7 @@ h3 {
 /*  GENERAL COMPONENTS  */
 /************************/
 .heading-primary {
-  font-size: 4.4rem;
+  font-size: 4rem;
   font-weight: 700;
   line-height: 1.05;
   color: #333333;
@@ -268,7 +268,7 @@ h3 {
 }
 
 .hero-img {
-  width: 60%;
+  width: 70%;
   box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.25);
 }
 
