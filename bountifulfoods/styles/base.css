@@ -107,10 +107,10 @@ h3 {
 .submitBtn,
 .btn:link,
 .btn:visited {
-  color: #333333;
+  color: #ffffff;
   text-decoration: none;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 800;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
   transition: all 0.3s;
