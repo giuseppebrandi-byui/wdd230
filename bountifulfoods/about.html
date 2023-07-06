@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Giuseppe Brandi" />
+    <meta
+      name="description"
+      content="Marco Rossi was the co-founder of Marco Market and later Bountiful Foods. His wife Catherine helped him with the business venture."
+    />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/medium.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <title>Bountiful Foods | About Us</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#"
+        ><img src="images/logo.png" alt="Bountiful Foods logo" class="logo"
+      /></a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="index.html">Home</a></li>
+          <li><a class="main-nav-link" href="fresh.html">Fresh</a></li>
+          <li><a class="main-nav-link" href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="social-media">
+        <a href="#" target="_blank"
+          ><img
+            class="social-media-icon"
+            src="images/facebook-icon.png"
+            alt="facebook icon"
+        /></a>
+        <a href="#" target="_blank"
+          ><img
+            class="social-media-icon twitter"
+            src="images/twitter-icon.png"
+            alt="twitter icon"
+        /></a>
+        <a href="#" target="_blank"
+          ><img
+            class="social-media-icon instagram"
+            src="images/instagram-icon.png"
+            alt="instagram icon"
+        /></a>
+      </div>
+
+      <button aria-label="Menu Button" class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="marco-history-section">
+        <div class="container">
+          <h1 class="heading-about-page">About Us</h1>
+        </div>
+        <div class="container grid grid--2-cols">
+          <picture>
+            <img
+              src="images/marco.jpg"
+              alt="marco russo photo"
+              class="marco-img"
+              loading="lazy"
+            />
+          </picture>
+          <div class="marco-description">
+            <h2>A man with a vision</h2>
+            <p>
+              Founded in 1985 by Marco Rossi, Bountiful Foods is one of Carlsbad's largest grocery companies.
+            </p>
+            <p>
+              Originally from Caserta, Italy, Marco moved to the US when he was 18 years old. Both his father and mother were farmers and taught him the importance of taking care of the family farm. The young man often assisted his father in selling fruits and vegetables, but he had greater plans and wanted to travel.
+            </p>
+            <p>
+              In Carlsbad, CA, he was invited by his uncle, Giovanni, to assist his grocery business, which he sold to Marco after retiring.
+            </p>
+            <p>In the meantime, Marco had met his future wife Catherine who helped him with his new business venture</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="company-history-section">
+        <div class="container grid grid--2-cols">
+          <div class="business-description">
+            <h2>A family tradition</h2>
+            <p>
+             The business was renamed Marco Market by Marco and Catherine, and the two of them worked together to make it successful.
+            </p>
+            <p>
+              Having been exposed to farmers' culture from his youth, Marco decided to establish business relationships with farmers and supervise the quality of their products.
+            </p>
+            <p>
+             In order to import exotic fruits and vegetables from South America and the Caribbean, his wife suggested that he talk to farmers there.
+            </p>
+            <p>Marco and Catherine became well known in Carlsbad for the variety of produce available in their store. Marco Market was just the beginning of their successful business venture.</p>
+          </div>
+          <picture>
+            <img
+              src="images/business.jpg"
+              alt="Family Business Historical image"
+              class="business-img"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="container grid grid--2-cols">
+          <form method="get" action="thanks.html">
+            <fieldset>
+              <legend><h2>My Inquiry</h2></legend>
+              <label class="top">First Name* <input type="text" name="fname" required></label>
+              <label class="top">Last Name* <input type="text" name="lname" required></label>
+              <label class="top">Phone <input type="tel" name="phone" placeholder="12345551234"></label>
+              <label class="top">Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+              <label class="top">Message <textarea rows="4" cols="50" name="user-message" placeholder="Your Message ..." id="user-message"></textarea></label>
+              <input type="hidden" id="date-time" name="date-time" value="currentDateTime" />
+            </fieldset>
+
+            <input type="submit" value="Send My Inquiry" class="submitBtn" />
+          </form>
+
+
+          <div class="business-contact">
+            <h2>How to find us</h2>
+            <p>Bountiful Foods</p>
+            <p>623 Harrison St., Carlsbad, CA 92009</p>
+            <p>760-827-8916</p>
+            <p>Monday – Saturday: 8:00 AM to 9:00 PM</p>
+
+            <p class="further-details">
+              Should you need more information about our services please
+              complete the inquiry form. For urgent delivery, please contact us
+              over the phone.
+            </p>
+            <picture>
+              <a href="https://goo.gl/maps/mSLudzBPFLUhby3bA" target="_blank"><img
+                src="images/map.jpg"
+                alt="map of Bountiful Foods in Carlsbad"
+                class="img-map"
+                loading="lazy"
+              />
+            </picture></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid grid--footer footer-details">
+        <div class="logo-col">
+          <a href="#" class="footer-logo"
+            ><img
+              src="images/logo-footer.png"
+              alt="Bountiful Foods logo"
+              class="logo-footer"
+          /></a>
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#" target="_blank"
+                ><img
+                  class="social-media-icon-footer"
+                  src="images/facebook-icon.png"
+                  alt="facebook icon"
+              /></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#" target="_blank"
+                ><img
+                  class="social-media-icon-footer"
+                  src="images/twitter-icon.png"
+                  alt="twitter icon"
+              /></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#" target="_blank"
+                ><img
+                  class="social-media-icon-footer"
+                  src="images/instagram-icon.png"
+                  alt="instagram icon"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact Us</p>
+          <address class="contacts">
+            <p class="address">623 Harrison St., Carlsbad, CA 92009</p>
+            <p>
+              <a class="footer-link" href="tel:760-827-8916">760-827-8916</a
+              ><br /><a
+                class="footer-link"
+                href="mailto:info@bountiful-foods.com"
+                >info@bountiful-foods.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create Account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="about.html">About Us</a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Help Center</a></li>
+            <li><a class="footer-link" href="#">Recipes</a></li>
+            <li><a class="footer-link" href="#">Privacy Terms</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="project-details">
+        @ <span id="current-year">Current Year</span> Bountiful Foods | Giuseppe
+        Brandi | WDD 230 Project | Last Modified:
+        <span id="last-modified">20/04/1980 09:30:46</span>
+      </p>
+      <p class="openweathermap">
+        Weather data provided by
+        <a href="https://openweathermap.org" target="_blank"
+          >openweathermap.org</a
+        >
+      </p>
+    </footer>
+    <script src="scripts/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

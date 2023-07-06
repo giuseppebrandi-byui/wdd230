@@ -12,7 +12,10 @@
   }
 
   .carlsbad-description p,
-  .delivery-description p {
+  .delivery-description p,
+  .marco-description p,
+  .business-description p,
+  .business-contact p {
     line-height: 1.8;
     margin-bottom: 1.6rem;
   }

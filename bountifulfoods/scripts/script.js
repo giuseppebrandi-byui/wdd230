@@ -27,3 +27,10 @@ document.getElementById("last-modified").textContent = new Intl.DateTimeFormat(
   "en-GB",
   options
 ).format(lastModif);
+
+if (document.querySelector("#date-time")) {
+  document.querySelector("#date-time").value = new Intl.DateTimeFormat(
+    "en-GB",
+    options
+  ).format(lastModif);
+}
