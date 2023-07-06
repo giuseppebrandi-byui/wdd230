@@ -107,7 +107,7 @@ h3 {
 .submitBtn,
 .btn:link,
 .btn:visited {
-  color: #ffffff;
+  color: #333333;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
@@ -526,9 +526,15 @@ form input.submitBtn:hover {
   margin-bottom: 1.6rem;
 }
 
-.openweathermap a {
+.openweathermap a:link,
+.openweathermap a:visited {
   text-decoration: none;
   font-weight: 600;
+  color: #333333;
+}
+
+.openweathermap a:hover,
+.openweathermap a:active {
   color: #cf711f;
 }
 
