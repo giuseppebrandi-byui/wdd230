@@ -110,7 +110,6 @@ h3 {
   color: #ffffff;
   text-decoration: none;
   font-size: 2rem;
-  text-transform: uppercase;
   font-weight: 800;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
@@ -157,7 +156,7 @@ form input.submitBtn:hover {
   justify-content: space-between;
   align-items: center;
   background-color: #e9fcec;
-  height: 13rem;
+  height: 12.8rem;
   padding: 2rem 3.2rem 0 3.2rem;
   position: relative;
   row-gap: 2rem;
@@ -273,12 +272,12 @@ form input.submitBtn:hover {
 
 .hero-description {
   font-size: 2.2rem;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 4.8rem;
 }
 
 .hero-img {
-  width: 70%;
+  width: 80%;
   box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.25);
 }
 
@@ -301,7 +300,11 @@ form input.submitBtn:hover {
 
 .product-img {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 3.2rem;
+}
+
+.product {
+  font-size: 2rem;
 }
 
 .card {
@@ -313,12 +316,12 @@ form input.submitBtn:hover {
 .inner-card {
   padding: 1rem;
   border: 1px solid #ced4da;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
   text-transform: uppercase;
 }
 
@@ -327,7 +330,7 @@ form input.submitBtn:hover {
   display: block;
   font-weight: 600;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #333333;
   text-transform: uppercase;
   text-align: center;
@@ -340,9 +343,9 @@ form input.submitBtn:hover {
 }
 
 .description {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
-  line-height: 1.2;
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+  line-height: 1.6;
 }
 
 .product,
@@ -350,7 +353,7 @@ form input.submitBtn:hover {
 .total {
   display: flex;
   justify-content: space-between;
-  line-height: 2;
+  line-height: 1.8;
 }
 
 /****************************/
@@ -370,7 +373,7 @@ form input.submitBtn:hover {
 .marco-description h2,
 .business-description h2,
 .business-contact h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -381,8 +384,9 @@ form input.submitBtn:hover {
 .business-description p,
 .business-contact p,
 .thank-you-message p {
-  font-size: 1.6rem;
-  line-height: 1.5;
+  font-size: 2rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
 }
 
 .carlsbad-section,
@@ -423,22 +427,19 @@ form input.submitBtn:hover {
 }
 
 .weather-type {
-  font-size: 2rem;
-  padding: 2rem 0;
+  font-size: 2.4rem;
+  padding: 2.4rem 0;
   border-bottom: 1px solid #ced4da;
-  margin-bottom: 2rem;
+  margin-bottom: 2.4rem;
   text-transform: capitalize;
 }
 
-.speed {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
+.speed,
 .humidity {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
 }
 
 /****************************/
@@ -472,7 +473,7 @@ form input.submitBtn:hover {
 
 .footer-logo {
   display: block;
-  margin-bottom: 2rem;
+  margin-bottom: 2.4rem;
 }
 
 .logo-footer {
@@ -480,14 +481,14 @@ form input.submitBtn:hover {
 }
 
 .footer-heading {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 3.2rem;
 }
 
 .contacts {
   font-style: normal;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.6;
 }
 
@@ -505,7 +506,7 @@ form input.submitBtn:hover {
 .footer-link:link,
 .footer-link:visited {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #333333;
   transition: all 0.3s;
 }
@@ -548,7 +549,7 @@ form input.submitBtn:hover {
 }
 
 .img-map {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
 }
 
 /* FORM STYLING */

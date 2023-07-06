@@ -1,4 +1,8 @@
 @media only screen and (min-width: 75em) {
+  .grid {
+    gap: 5rem;
+  }
+
   .grid--2-cols {
     grid-template-columns: 1fr 1fr;
   }
@@ -7,26 +11,13 @@
     grid-template-columns: 1fr 1fr 1fr 1.5fr;
   }
 
-  .grid {
-    gap: 5rem;
-  }
-
-  .carlsbad-description p,
-  .delivery-description p,
-  .marco-description p,
-  .business-description p,
-  .business-contact p {
-    line-height: 1.8;
-    margin-bottom: 1.6rem;
-  }
-
   .hero {
     max-width: 140rem;
-    gap: 9.6rem;
+    gap: 8rem;
   }
 
   .container {
-    max-width: 130rem;
+    max-width: 135rem;
   }
 
   .heading-primary {
@@ -39,5 +30,13 @@
 
   .main-nav-list {
     gap: 4.8rem;
+  }
+
+  .card h3 {
+    margin-bottom: 0.8rem;
+  }
+
+  .product-img {
+    margin-bottom: 2.4rem;
   }
 }

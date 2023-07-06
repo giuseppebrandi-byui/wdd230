@@ -1,4 +1,8 @@
 @media only screen and (min-width: 48em) {
+  .grid {
+    gap: 4.8rem;
+  }
+
   .grid--5-cols {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -13,10 +17,6 @@
 
   .grid--footer {
     grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
-  }
-
-  .grid {
-    gap: 4.8rem;
   }
 
   .header {
@@ -50,6 +50,22 @@
   .heading-about-page {
     font-size: 3.6rem;
     margin-bottom: 4.8rem;
+  }
+
+  .carlsbad-description p,
+  .delivery-description p,
+  .marco-description p,
+  .business-description p,
+  .business-contact p {
+    line-height: 1.6;
+  }
+
+  .description {
+    font-size: 1.8rem;
+  }
+
+  .product {
+    font-size: 1.8rem;
   }
 
   .btn-mobile-nav {
