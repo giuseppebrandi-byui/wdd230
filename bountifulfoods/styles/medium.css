@@ -47,7 +47,8 @@
   }
 
   .heading-secondary,
-  .heading-about-page {
+  .heading-about-page,
+  .heading-fresh-page {
     font-size: 3.6rem;
     margin-bottom: 4.8rem;
   }

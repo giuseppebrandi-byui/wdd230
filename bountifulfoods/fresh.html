@@ -64,7 +64,133 @@
     </header>
 
     <main>
-      <h1>Fresh Page</h1>
+      <section class="make-juice-section">
+        <div class="container">
+          <h1 class="heading-fresh-page">Make Your Fruit Drink Mix</h1>
+        </div>
+        <div class="container grid grid--2-cols">
+          <form method="get">
+            <fieldset>
+              <!-- <legend><h2>Order Form</h2></legend> -->
+              <label class="top"
+                >First Name* <input type="text" name="fname" required
+              /></label>
+              <label class="top"
+                >Phone*
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="12345551234"
+                  required
+              /></label>
+              <label class="top"
+                >Email*
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="someone@gmail.com"
+                  required
+              /></label>
+              <label class="top"
+                >Fruit One
+                <select name="fruit-1" id="selection-1">
+                  <option value="">Please Select</option>
+                </select>
+              </label>
+              <label class="top"
+                >Fruit Two
+                <select name="fruit-2" id="selection-2">
+                  <option value="">Please Select</option>
+                </select>
+              </label>
+              <label class="top"
+                >Fruit Three
+                <select name="fruit-3" id="selection-3">
+                  <option value="">Please Select</option>
+                </select>
+              </label>
+              <label class="top"
+                >Instructions
+                <textarea
+                  rows="4"
+                  cols="50"
+                  name="user-message"
+                  placeholder="Enter your instructions ..."
+                  id="user-message"
+                ></textarea>
+              </label>
+              <input
+                type="hidden"
+                id="date-time"
+                name="date-time"
+                value="currentDateTime"
+              />
+              <input
+                type="hidden"
+                id="date-time"
+                name="date-time"
+                value="currentDateTime"
+              />
+            </fieldset>
+
+            <input type="submit" value="Send Your Order" class="submitBtn" />
+          </form>
+
+          <div class="card-details">
+            <h3 class="order-title">Your Details</h3>
+            <div class="border">
+              <div class="user-name inner-grid">
+                <p>Name:</p>
+                <p class="yourName">Giuseppe</p>
+              </div>
+              <div class="user-tel inner-grid">
+                <p>Phone:</p>
+                <p class="yourPhone">1234567890</p>
+              </div>
+              <div class="user-email inner-grid">
+                <p>Email:</p>
+                <p class="yourEmail">someone@gmail.com</p>
+              </div>
+              <div class="user-instructions inner-grid">
+                <p>Instructions:</p>
+                <p class="instructions">Lorem ipsum dolor, sit amet.</p>
+              </div>
+              <div class="user-selected-fruit inner-grid">
+                <p>Selected Fruit:</p>
+                <p>
+                  <span class="choice1">Apple</span> -
+                  <span class="choice2">Kiwi</span> -
+                  <span class="choice3">Banana</span>
+                </p>
+              </div>
+              <div class="total-carbs inner-grid">
+                <p>Total Carbs:</p>
+                <p>100</p>
+              </div>
+              <div class="total-proteins inner-grid">
+                <p>Total Proteins:</p>
+                <p>100</p>
+              </div>
+              <div class="total-fat inner-grid">
+                <p>Total Fats:</p>
+                <p>100</p>
+              </div>
+              <div class="total-sugar inner-grid">
+                <p>Total Sugars:</p>
+                <p>100</p>
+              </div>
+              <div class="total-calories inner-grid">
+                <p>Total Calories:</p>
+                <p>100</p>
+              </div>
+              <div class="order-date-time inner-grid">
+                <p>Order Date &amp; Time:</p>
+                <p class="date-time-order">07/07/2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -156,6 +282,7 @@
       </p>
     </footer>
     <script src="scripts/script.js"></script>
+    <script src="scripts/fresh.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
