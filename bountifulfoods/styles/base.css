@@ -654,5 +654,9 @@ form label.top input:required:valid {
 }
 
 .card-details {
-  max-height: 89.5rem;
+  max-height: 80rem;
+}
+
+.is-hidden {
+  display: none;
 }

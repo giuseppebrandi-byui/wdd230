@@ -45,6 +45,16 @@ const btnEl = document.querySelector(".submitBtn");
 // Add event listener to populate the Your Details content area.
 btnEl.addEventListener("click", (event) => {
   event.preventDefault();
+
+  // Remove class is-hidden to show the details card with nutritional information
+  const detailsSection = document.querySelector(".card-details");
+  detailsSection.classList.remove("is-hidden");
+
+  // Remove class grid--1-cols and replace it with grid--2-cols to show both the form input and card with nutritional information on the same row.
+  const inputForm = document.querySelector(".input-form");
+  inputForm.classList.remove("grid--1-cols");
+  inputForm.classList.add("grid--2-cols");
+
   const nameEl = document.querySelector('input[name="fname"]');
   const phoneEl = document.querySelector('input[name="phone"]');
   const emailEl = document.querySelector('input[name="email"]');
