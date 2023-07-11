@@ -32,9 +32,6 @@ const days = [
 
 function showWeatherdata(data) {
   let otherDaysForecast = "";
-  const dayEl = document.querySelector(".card-title");
-  const time = new Date();
-  const day = time.getDay();
 
   data.list.forEach((day, idx) => {
     if (idx === 0 || idx === 8 || idx === 16) {
@@ -52,16 +49,18 @@ function showWeatherdata(data) {
                                 alt="overcast clouds"
                               />
                             </picture>
-                            <h4 class="temperature">${day.main.temp}&#8457;</h4>
+                            <h4 class="temperature">${day.main.temp.toFixed(
+                              0
+                            )}&#8457;</h4>
                           </div>
                           <p class="weather-type">${
                             day.weather[0].description
                           }</p>
                           <div class="speed">
                             <p>Wind Speed:</p>
-                            <p class="speed-value"><span>${
-                              day.wind.speed
-                            }</span> mph</p>
+                            <p class="speed-value"><span>${day.wind.speed.toFixed(
+                              1
+                            )}</span> mph</p>
                           </div>
                           <div class="humidity">
                             <p>Humidity:</p>

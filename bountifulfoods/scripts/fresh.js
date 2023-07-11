@@ -1,11 +1,11 @@
 const url = "https://brotherblazzard.github.io/canvas-content/fruit.json";
 
+let data;
+
 async function getFruitData() {
   const response = await fetch(url);
-  const data = await response.json();
+  data = await response.json();
   displayFruitNames(data);
-  // getNutritionData(data);
-  // checkEquality(data);
 }
 
 getFruitData();
@@ -54,7 +54,7 @@ btnEl.addEventListener("click", (event) => {
   const selectEl3 = document.querySelector('select[name="fruit-3"]');
   const dateTimeEl = document.querySelector('input[name="date-time"]');
 
-  // extract values from input, textarea and select elements
+  // Extract values from input, textarea, select elements and date & time;
   const nameValue = nameEl.value;
   const phoneValue = phoneEl.value;
   const emailValue = emailEl.value;
@@ -67,7 +67,7 @@ btnEl.addEventListener("click", (event) => {
   // Select the elements where you want to inject data
   const fName = document.querySelector(".yourName");
   const tel = document.querySelector(".yourPhone");
-  const mail = document.querySelector(".yourEmail");
+  const email = document.querySelector(".yourEmail");
   const message = document.querySelector(".instructions");
   const choice1 = document.querySelector(".choice1");
   const choice2 = document.querySelector(".choice2");
@@ -77,45 +77,70 @@ btnEl.addEventListener("click", (event) => {
   // Inject data
   fName.textContent = nameValue;
   tel.textContent = phoneValue;
-  mail.textContent = emailValue;
+  email.textContent = emailValue;
   message.textContent = messageValue;
   choice1.textContent = select1Value;
   choice2.textContent = select2Value;
   choice3.textContent = select3Value;
   dateTime.textContent = dateTimeValue;
+  getNutritionData(data);
 
-  function checkEquality(fruits) {
-    const selectEl1 = document.querySelector('select[name="fruit-1"]');
-    const selectEl2 = document.querySelector('select[name="fruit-2"]');
-    const selectEl3 = document.querySelector('select[name="fruit-3"]');
-    const select1Value = selectEl1.value;
-    console.log(select1Value);
-    const select2Value = selectEl2.value;
-    console.log(select2Value);
-    const select3Value = selectEl3.value;
-    console.log(select3Value);
-    // fruits.forEach((fruit) => {
-    //   let fruitName = `${fruit.name}`;
-    //   console.log(fruitName);
-    // });
-  }
-  checkEquality();
+  // Clear input fields after submission
+  nameEl.value = "";
+  phoneEl.value = "";
+  emailEl.value = "";
+  messageEl.value = "";
+  selectEl1.value = "";
+  selectEl2.value = "";
+  selectEl3.value = "";
+  dateTimeEl.value = "";
 });
 
-// const getNutritionData = (fruits) => {
-//   fruits.forEach((fruit) => {
-//     // Extract fruit carbohydrates value
-//     let carbs = `${fruit.nutritions.carbohydrates}`;
-//     // Extract fruit proteins value
-//     let proteins = `${fruit.nutritions.protein}`;
-//     // Extract fruit fats value
-//     let fats = `${fruit.nutritions.fat}`;
-//     // Extract fruit calories value
-//     let calories = `${fruit.nutritions.calories}`;
-//     // Extract fruit sugars value
-//     let sugars = `${fruit.nutritions.sugar}`;
-//     // Extract fruit's name from json file
-//     let fruitName = `${fruit.name}`;
-//     console.log(fruitName);
-//   });
-// };
+const getNutritionData = (fruits) => {
+  const carbs = document.querySelector(".carbs");
+  const proteins = document.querySelector(".proteins");
+  const fats = document.querySelector(".fats");
+  const calories = document.querySelector(".calories");
+  const sugars = document.querySelector(".sugars");
+
+  const choice1 = document.querySelector('select[name="fruit-1"]');
+  const choice2 = document.querySelector('select[name="fruit-2"]');
+  const choice3 = document.querySelector('select[name="fruit-3"]');
+
+  let totalCarbs = 0;
+  let totalProteins = 0;
+  let totalFats = 0;
+  let totalCalories = 0;
+  let totalSugars = 0;
+
+  fruits.forEach((fruit) => {
+    if (
+      choice1.value === `${fruit.name}` ||
+      choice2.value === `${fruit.name}` ||
+      choice3.value === `${fruit.name}`
+    ) {
+      // Extract fruit carbohydrates value
+      let carbs = Number(`${fruit.nutritions.carbohydrates}`);
+      // Extract fruit proteins value
+      let proteins = Number(`${fruit.nutritions.protein}`);
+      // Extract fruit fats value
+      let fats = Number(`${fruit.nutritions.fat}`);
+      // Extract fruit calories value
+      let calories = Number(`${fruit.nutritions.calories}`);
+      // Extract fruit sugars value
+      let sugars = Number(`${fruit.nutritions.sugar}`);
+      // Extract fruit's name from json file
+      let fruitName = `${fruit.name}`;
+      totalCarbs += carbs;
+      totalProteins += proteins;
+      totalFats += fats;
+      totalCalories += calories;
+      totalSugars += sugars;
+    }
+  });
+  carbs.textContent = totalCarbs.toFixed(0);
+  proteins.textContent = totalProteins.toFixed(0);
+  fats.textContent = totalFats.toFixed(1);
+  calories.textContent = totalCalories.toFixed(0);
+  sugars.textContent = totalSugars.toFixed(0);
+};
