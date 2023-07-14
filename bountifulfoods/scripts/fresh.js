@@ -87,18 +87,13 @@ btnEl.addEventListener("click", (event) => {
   const quantity = document.querySelector(".quantity");
   const dateTime = document.querySelector(".date-time-order");
 
-  // Get the stored VALUE for the numDrinks-ls KEY in localStorage if it exists. If the numDrinks-ls KEY is missing, then assign 0 to the numDrinks variable.
+  // Get the stored VALUE for the numDrinks-ls KEY in localStorage if it exists.
+  // If the numDrinks - ls KEY is missing, then assign 0 to the numDrinks variable.
   let numDrinks = Number(window.localStorage.getItem("numDrinks-ls")) || 0;
-
   // increment the number of drinks.
   numDrinks += quantityValue;
-
   // store the new number of drinks total into localStorage, key=numDrinks-ls
   localStorage.setItem("numDrinks-ls", `${numDrinks}`);
-
-  if (numDrinks !== 0) {
-    console.log(`You have a total of ${numDrinks} orders`);
-  }
 
   // Inject data
   fName.textContent = nameValue;

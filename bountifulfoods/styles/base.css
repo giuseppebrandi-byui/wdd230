@@ -322,9 +322,10 @@ form input.submitBtn:hover {
 }
 
 .inner-card {
-  padding: 1rem;
+  padding: 2rem;
   border: 1px solid #ced4da;
   font-size: 1.8rem;
+  text-align: center;
 }
 
 .card h3,
@@ -416,10 +417,6 @@ form input.submitBtn:hover {
   margin-bottom: 2rem;
 }
 
-.inner-card {
-  padding: 2rem;
-  text-align: center;
-}
 .temperature {
   font-size: 3rem;
   font-weight: 500;

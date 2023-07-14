@@ -35,6 +35,16 @@ if (document.querySelector("#date-time")) {
   ).format(lastModif);
 }
 
+// DISPLAY NUMBER OF DRINKS IN THE HOME PAGE
+
 // Initialize display element variable
 const numDrinksDisplay = document.querySelector(".num-drinks-display");
-console.log(numDrinksDisplay);
+let numDrinks = Number(window.localStorage.getItem("numDrinks-ls")) || 0;
+
+if (numDrinksDisplay !== null) {
+  if (numDrinks !== 0) {
+    numDrinksDisplay.innerHTML = `<p>According to our database, you have ordered <strong>${numDrinks}</strong> fruit mix from our website so far.</p>`;
+  } else {
+    numDrinksDisplay.innerHTML = `<p>According to our database, you have not made any orders so far.</p>`;
+  }
+}
