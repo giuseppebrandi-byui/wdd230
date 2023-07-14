@@ -1,9 +1,9 @@
-const url = "https://brotherblazzard.github.io/canvas-content/fruit.json";
+const urlFruit = "https://brotherblazzard.github.io/canvas-content/fruit.json";
 
 let data;
 
 async function getFruitData() {
-  const response = await fetch(url);
+  const response = await fetch(urlFruit);
   data = await response.json();
   displayFruitNames(data);
 }
@@ -62,6 +62,7 @@ btnEl.addEventListener("click", (event) => {
   const selectEl1 = document.querySelector('select[name="fruit-1"]');
   const selectEl2 = document.querySelector('select[name="fruit-2"]');
   const selectEl3 = document.querySelector('select[name="fruit-3"]');
+  const quantityEl = document.querySelector('input[name="quantity"]');
   const dateTimeEl = document.querySelector('input[name="date-time"]');
 
   // Extract values from input, textarea, select elements and date & time;
@@ -72,6 +73,7 @@ btnEl.addEventListener("click", (event) => {
   const select1Value = selectEl1.value;
   const select2Value = selectEl2.value;
   const select3Value = selectEl3.value;
+  const quantityValue = Number(quantityEl.value);
   const dateTimeValue = dateTimeEl.value;
 
   // Select the elements where you want to inject data
@@ -82,7 +84,21 @@ btnEl.addEventListener("click", (event) => {
   const choice1 = document.querySelector(".choice1");
   const choice2 = document.querySelector(".choice2");
   const choice3 = document.querySelector(".choice3");
+  const quantity = document.querySelector(".quantity");
   const dateTime = document.querySelector(".date-time-order");
+
+  // Get the stored VALUE for the numDrinks-ls KEY in localStorage if it exists. If the numDrinks-ls KEY is missing, then assign 0 to the numDrinks variable.
+  let numDrinks = Number(window.localStorage.getItem("numDrinks-ls")) || 0;
+
+  // increment the number of drinks.
+  numDrinks += quantityValue;
+
+  // store the new number of drinks total into localStorage, key=numDrinks-ls
+  localStorage.setItem("numDrinks-ls", `${numDrinks}`);
+
+  if (numDrinks !== 0) {
+    console.log(`You have a total of ${numDrinks} orders`);
+  }
 
   // Inject data
   fName.textContent = nameValue;
@@ -92,6 +108,7 @@ btnEl.addEventListener("click", (event) => {
   choice1.textContent = select1Value;
   choice2.textContent = select2Value;
   choice3.textContent = select3Value;
+  quantity.textContent = quantityValue;
   dateTime.textContent = dateTimeValue;
   getNutritionData(data);
 
@@ -103,6 +120,7 @@ btnEl.addEventListener("click", (event) => {
   selectEl1.value = "";
   selectEl2.value = "";
   selectEl3.value = "";
+  quantityEl.value = "";
   dateTimeEl.value = "";
 });
 

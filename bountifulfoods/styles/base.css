@@ -84,7 +84,7 @@ h3 {
 /*  GENERAL COMPONENTS  */
 /************************/
 .heading-primary {
-  font-size: 4rem;
+  font-size: 3.6rem;
   font-weight: 700;
   line-height: 1.05;
   color: #333333;
@@ -163,7 +163,7 @@ form input.submitBtn:hover {
   justify-content: space-between;
   align-items: center;
   background-color: #e9fcec;
-  height: 21rem;
+  height: 18rem;
   padding: 1.6rem 3.2rem 1.6rem 3.2rem;
   position: relative;
   row-gap: 2rem;
@@ -211,7 +211,7 @@ form input.submitBtn:hover {
   display: none;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 783px) {
   .btn-mobile-nav {
     border: none;
     background: none;
@@ -265,7 +265,7 @@ form input.submitBtn:hover {
 .hero {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 0 8rem;
+  padding: 0 5rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 6.4rem;
@@ -352,7 +352,7 @@ form input.submitBtn:hover {
 }
 
 .description {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 2.4rem;
   line-height: 1.6;
 }
@@ -393,7 +393,7 @@ form input.submitBtn:hover {
 .business-description p,
 .business-contact p,
 .thank-you-message p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.8;
   margin-bottom: 1.6rem;
 }
@@ -491,14 +491,14 @@ form input.submitBtn:hover {
 }
 
 .footer-heading {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 3.2rem;
 }
 
 .contacts {
   font-style: normal;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.6;
 }
 
@@ -516,7 +516,7 @@ form input.submitBtn:hover {
 .footer-link:link,
 .footer-link:visited {
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #333333;
   transition: all 0.3s;
 }
@@ -564,7 +564,7 @@ form fieldset {
   border: 1px solid #e9ecef;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   border-radius: 8px;
-  padding: 1rem 2% 3rem;
+  padding: 1rem 2rem 3rem 2rem;
 }
 
 form legend h2 {
@@ -629,7 +629,7 @@ form label.top input:required:valid {
 /****************************/
 
 .border {
-  border: 1px solid red;
+  border: 1px solid #e9ecef;
   padding: 2rem;
 }
 .user-name,
@@ -637,6 +637,7 @@ form label.top input:required:valid {
 .user-email,
 .user-instructions,
 .user-selected-fruit,
+.user-quantity,
 .total-carbs,
 .total-proteins,
 .total-fat,
@@ -653,8 +654,17 @@ form label.top input:required:valid {
   min-width: 20rem;
 }
 
+.order-date-time {
+  margin-bottom: 2.4rem;
+}
+
+.total-carbs {
+  margin-top: 2.4rem;
+}
+
 .card-details {
-  max-height: 80rem;
+  max-height: 89.35rem;
+  border-radius: 8px;
 }
 
 .is-hidden {

@@ -110,6 +110,15 @@
                 </select>
               </label>
               <label class="top"
+                >Quantity*
+                <input
+                  type="number"
+                  name="quantity"
+                  min="0"
+                  placeholder="0"
+                  required
+              /></label>
+              <label class="top"
                 >Instructions
                 <textarea
                   rows="4"
@@ -131,7 +140,7 @@
           </form>
 
           <div class="card-details is-hidden">
-            <h3 class="order-title">Your Details</h3>
+            <h3 class="order-title">Order Details</h3>
             <div class="border">
               <div class="user-name inner-grid">
                 <p>Name:</p>
@@ -145,41 +154,45 @@
                 <p>Email:</p>
                 <p class="yourEmail"></p>
               </div>
-              <div class="user-instructions inner-grid">
-                <p>Instructions:</p>
-                <p class="instructions"></p>
-              </div>
               <div class="user-selected-fruit inner-grid">
-                <p>Selected Fruit:</p>
+                <p>Fruit Mix:</p>
                 <p>
                   <span class="choice1"></span> -
                   <span class="choice2"></span> -
                   <span class="choice3"></span>
                 </p>
               </div>
-              <div class="total-carbs inner-grid">
-                <p>Total Carbs:</p>
-                <p class="carbs"></p>
+              <div class="user-quantity inner-grid">
+                <p>Quantity:</p>
+                <p class="quantity"></p>
               </div>
-              <div class="total-proteins inner-grid">
-                <p>Total Proteins:</p>
-                <p class="proteins"></p>
-              </div>
-              <div class="total-fat inner-grid">
-                <p>Total Fats:</p>
-                <p class="fats"></p>
-              </div>
-              <div class="total-sugar inner-grid">
-                <p>Total Sugars:</p>
-                <p class="sugars"></p>
-              </div>
-              <div class="total-calories inner-grid">
-                <p>Total Calories:</p>
-                <p class="calories"></p>
+              <div class="user-instructions inner-grid">
+                <p>Instructions:</p>
+                <p class="instructions"></p>
               </div>
               <div class="order-date-time inner-grid">
                 <p>Order Date &amp; Time:</p>
                 <p class="date-time-order"></p>
+              </div>
+              <div class="total-carbs inner-grid">
+                <p>Total Carbs(PU):</p>
+                <p class="carbs"></p>
+              </div>
+              <div class="total-proteins inner-grid">
+                <p>Total Proteins(PU):</p>
+                <p class="proteins"></p>
+              </div>
+              <div class="total-fat inner-grid">
+                <p>Total Fats(PU):</p>
+                <p class="fats"></p>
+              </div>
+              <div class="total-sugar inner-grid">
+                <p>Total Sugars(PU):</p>
+                <p class="sugars"></p>
+              </div>
+              <div class="total-calories inner-grid">
+                <p>Total Calories(PU):</p>
+                <p class="calories"></p>
               </div>
             </div>
           </div>

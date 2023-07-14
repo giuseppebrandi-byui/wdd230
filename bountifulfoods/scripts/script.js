@@ -34,3 +34,7 @@ if (document.querySelector("#date-time")) {
     options
   ).format(lastModif);
 }
+
+// Initialize display element variable
+const numDrinksDisplay = document.querySelector(".num-drinks-display");
+console.log(numDrinksDisplay);
