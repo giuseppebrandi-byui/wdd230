@@ -53,9 +53,9 @@ function showWeatherdata(data) {
                               0
                             )}&#8457;</h4>
                           </div>
-                          <p class="weather-type">${
+                          <h4 class="weather-type">${
                             day.weather[0].description
-                          }</p>
+                          }</h4>
                           <div class="speed">
                             <p>Wind Speed:</p>
                             <p class="speed-value"><span>${day.wind.speed.toFixed(

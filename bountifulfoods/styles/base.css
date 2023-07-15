@@ -368,7 +368,7 @@ form input.submitBtn:hover {
 
 .csr-img {
   border-radius: 50%;
-  width: 50%;
+  width: 47%;
   margin-bottom: 1rem;
 }
 
@@ -382,7 +382,7 @@ form input.submitBtn:hover {
 }
 
 .csr-details {
-  margin-bottom: 1.4rem;
+  margin-bottom: 2.4rem;
 }
 
 .csr-details p {
@@ -457,7 +457,8 @@ form input.submitBtn:hover {
 }
 
 .weather-type {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
+  font-weight: normal;
   padding: 2.4rem 0;
   border-bottom: 1px solid #ced4da;
   margin-bottom: 2.4rem;
