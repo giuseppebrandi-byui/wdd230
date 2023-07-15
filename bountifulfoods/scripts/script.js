@@ -1,11 +1,11 @@
-// Make mobile navigation work
+// MAKE MOBILE NAVIGATION WORK
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
 btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 });
 
-// Last Modification Footer Section
+// LAST MODIFIED DATE FOR FOOTER SECTION
 let date = new Date();
 let year = date.getFullYear();
 let currentYear = document.querySelector("#current-year");
@@ -36,8 +36,6 @@ if (document.querySelector("#date-time")) {
 }
 
 // DISPLAY NUMBER OF DRINKS IN THE HOME PAGE
-
-// Initialize display element variable
 const numDrinksDisplay = document.querySelector(".num-drinks-display");
 let numDrinks = Number(window.localStorage.getItem("numDrinks-ls")) || 0;
 
@@ -48,3 +46,33 @@ if (numDrinksDisplay !== null) {
     numDrinksDisplay.innerHTML = `<p>According to our database, you have not made any orders so far.</p>`;
   }
 }
+
+// LAZY LOADING
+const images = document.querySelectorAll("[data-src]");
+
+function preloadImage(img) {
+  const src = img.getAttribute("data-src");
+  if (!src) {
+    return;
+  }
+  img.src = src;
+}
+
+const imgOptions = {
+  threshold: 0,
+  rootMargin: "0px 0px 50px 0px",
+};
+const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      preloadImage(entry.target);
+      imgObserver.unobserve(entry.target);
+    }
+  });
+}, imgOptions);
+
+images.forEach((image) => {
+  imgObserver.observe(image);
+});
