@@ -96,4 +96,25 @@
     grid-row: 1;
     grid-column: span 1;
   }
+
+  .inner-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  form input.submitBtn {
+    width: initial;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.8rem;
+  }
+
+  .contacts {
+    font-size: 1.8rem;
+  }
+
+  .footer-heading {
+    font-size: 2rem;
+  }
 }

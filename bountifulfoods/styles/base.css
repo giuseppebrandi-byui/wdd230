@@ -366,6 +366,29 @@ form input.submitBtn:hover {
   line-height: 1.8;
 }
 
+.csr-img {
+  border-radius: 50%;
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.customer-service {
+  text-align: center;
+}
+
+.csr-name {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.csr-details {
+  margin-bottom: 1.4rem;
+}
+
+.csr-details p {
+  font-size: 1.6rem;
+}
+
 /****************************/
 /*  ABOUT CARLSBAD          */
 /****************************/
@@ -602,6 +625,7 @@ form label.top textarea {
 
 form input.submitBtn {
   border: none;
+  width: 100%;
 }
 
 form input.submitBtn:hover {
@@ -647,8 +671,7 @@ form label.top input:required:valid {
 
 .inner-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-width: 20rem;
+  grid-template-columns: 1fr;
 }
 
 .order-date-time {
