@@ -397,6 +397,7 @@ form input.submitBtn:hover {
 .truck-img,
 .business-img,
 .marco-img,
+.produce-img,
 .img-map {
   width: 100%;
 }
@@ -427,6 +428,7 @@ form input.submitBtn:hover {
 .weather-section,
 .company-history-section,
 .marco-history-section,
+.fresh-new-look-section,
 .contact-section,
 .make-juice-section {
   padding: 0 0 9.6rem 0;
