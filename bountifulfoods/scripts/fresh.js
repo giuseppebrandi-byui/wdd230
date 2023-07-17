@@ -55,6 +55,10 @@ btnEl.addEventListener("click", (event) => {
   inputForm.classList.remove("grid--1-cols");
   inputForm.classList.add("grid--2-cols");
 
+  // Remove leged when the order form is submitted
+  const legend = document.querySelector("legend");
+  legend.classList.add("is-hidden");
+
   const nameEl = document.querySelector('input[name="fname"]');
   const phoneEl = document.querySelector('input[name="phone"]');
   const emailEl = document.querySelector('input[name="email"]');
