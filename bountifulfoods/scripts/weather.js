@@ -46,7 +46,7 @@ function showWeatherdata(data) {
                                 src="https://openweathermap.org/img/wn/${
                                   day.weather[0].icon
                                 }@4x.png"
-                                alt="overcast clouds"
+                                alt="${day.weather[0].description}"
                               />
                             </picture>
                             <h4 class="temperature">${day.main.temp.toFixed(
