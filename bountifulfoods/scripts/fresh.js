@@ -2,6 +2,10 @@ const urlFruit = "https://brotherblazzard.github.io/canvas-content/fruit.json";
 
 let data;
 
+// Generate todays date and time
+let dateNow = new Date();
+let lastModified = dateNow[document.lastModified];
+
 async function getFruitData() {
   const response = await fetch(urlFruit);
   data = await response.json();
@@ -67,7 +71,6 @@ btnEl.addEventListener("click", (event) => {
   const selectEl2 = document.querySelector('select[name="fruit-2"]');
   const selectEl3 = document.querySelector('select[name="fruit-3"]');
   const quantityEl = document.querySelector('input[name="quantity"]');
-  const dateTimeEl = document.querySelector('input[name="date-time"]');
 
   // Extract values from input, textarea, select elements and date & time;
   const nameValue = nameEl.value;
@@ -78,7 +81,6 @@ btnEl.addEventListener("click", (event) => {
   const select2Value = selectEl2.value;
   const select3Value = selectEl3.value;
   const quantityValue = Number(quantityEl.value);
-  const dateTimeValue = dateTimeEl.value;
 
   // Select the elements where you want to inject data
   const fName = document.querySelector(".yourName");
@@ -108,7 +110,9 @@ btnEl.addEventListener("click", (event) => {
   choice2.textContent = select2Value;
   choice3.textContent = select3Value;
   quantity.textContent = quantityValue;
-  dateTime.textContent = dateTimeValue;
+  dateTime.textContent = new Intl.DateTimeFormat("en-GB", options).format(
+    lastModified
+  );
   getNutritionData(data);
 
   // Clear input fields after submission
@@ -120,7 +124,6 @@ btnEl.addEventListener("click", (event) => {
   selectEl2.value = "";
   selectEl3.value = "";
   quantityEl.value = "";
-  dateTimeEl.value = "";
 });
 
 const getNutritionData = (fruits) => {
