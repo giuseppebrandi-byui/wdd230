@@ -301,9 +301,6 @@ form input.submitBtn:hover {
 /****************************/
 /*  WHAT WE OFFER SECTION   */
 /****************************/
-.what-we-offer {
-  padding: 0 0 9.6rem 0;
-}
 
 .product-img {
   width: 100%;
@@ -423,6 +420,7 @@ form input.submitBtn:hover {
   margin-bottom: 1.6rem;
 }
 
+.what-we-offer,
 .carlsbad-section,
 .delivery-section,
 .weather-section,
@@ -554,6 +552,7 @@ form input.submitBtn:hover {
   padding-bottom: 3.2rem;
   border-bottom: 1px solid #ced4da;
 }
+
 .project-details,
 .openweathermap {
   text-align: center;

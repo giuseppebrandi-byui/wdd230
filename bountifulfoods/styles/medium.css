@@ -16,7 +16,7 @@
   }
 
   .grid--footer {
-    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1.5fr repeat(3, 1fr);
   }
 
   .header {
@@ -59,10 +59,6 @@
   .business-description p,
   .business-contact p {
     line-height: 1.6;
-  }
-
-  .description {
-    font-size: 1.8rem;
   }
 
   .product {
