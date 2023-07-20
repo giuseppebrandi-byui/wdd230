@@ -69,28 +69,41 @@
           <h1 class="heading-fresh-page">Make Your Fruit Drink Mix</h1>
         </div>
         <div class="container grid input-form grid--1-cols">
-          <form method="get">
+          <form method="get" id="form" novalidate>
             <fieldset>
               <legend><h2>Order Form</h2></legend>
-              <label class="top"
-                >First Name* <input type="text" name="fname" required
-              /></label>
-              <label class="top"
-                >Phone*
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="12345551234"
-                  required
-              /></label>
-              <label class="top"
-                >Email*
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="someone@gmail.com"
-                  required
-              /></label>
+
+              <div class="form-control">
+                <label class="top"
+                  >First Name* <input type="text" name="fname" required
+                /></label>
+                <small>Error message</small>
+              </div>
+
+              <div class="form-control">
+                <label class="top"
+                  >Phone*
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="12345551234"
+                    required
+                /></label>
+                <small>Error message</small>
+              </div>
+
+              <div class="form-control">
+                <label class="top"
+                  >Email*
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="someone@gmail.com"
+                    required
+                /></label>
+                <small>Error message</small>
+              </div>
+
               <label class="top"
                 >Fruit One
                 <select name="fruit-1" id="selection-1">
@@ -109,15 +122,20 @@
                   <option value="">Please Select</option>
                 </select>
               </label>
-              <label class="top"
-                >Quantity*
-                <input
-                  type="number"
-                  name="quantity"
-                  min="0"
-                  placeholder="0"
-                  required
-              /></label>
+
+              <div class="form-control">
+                <label class="top"
+                  >Quantity*
+                  <input
+                    type="number"
+                    name="quantity"
+                    min="0"
+                    placeholder="0"
+                    required
+                /></label>
+                <small>Error message</small>
+              </div>
+
               <label class="top"
                 >Instructions
                 <textarea

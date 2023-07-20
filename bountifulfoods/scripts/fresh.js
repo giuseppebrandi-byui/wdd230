@@ -44,34 +44,35 @@ const displayFruitNames = (fruits) => {
   });
 };
 
-const btnEl = document.querySelector(".submitBtn");
+const nameEl = document.querySelector('input[name="fname"]');
+const phoneEl = document.querySelector('input[name="phone"]');
+const emailEl = document.querySelector('input[name="email"]');
+const messageEl = document.querySelector('textarea[name="user-message"]');
+const selectEl1 = document.querySelector('select[name="fruit-1"]');
+const selectEl2 = document.querySelector('select[name="fruit-2"]');
+const selectEl3 = document.querySelector('select[name="fruit-3"]');
+const quantityEl = document.querySelector('input[name="quantity"]');
 
-// Add event listener to populate the Your Details content area.
-btnEl.addEventListener("click", (event) => {
-  event.preventDefault();
+// Select the elements where you want to inject data
+const fName = document.querySelector(".yourName");
+const tel = document.querySelector(".yourPhone");
+const email = document.querySelector(".yourEmail");
+const message = document.querySelector(".instructions");
+const choice1 = document.querySelector(".choice1");
+const choice2 = document.querySelector(".choice2");
+const choice3 = document.querySelector(".choice3");
+const quantity = document.querySelector(".quantity");
+const dateTime = document.querySelector(".date-time-order");
 
-  // Remove class is-hidden to show the details card with nutritional information
-  const detailsSection = document.querySelector(".card-details");
-  detailsSection.classList.remove("is-hidden");
+const form = document.querySelector("#form");
+form.addEventListener("submit", (e) => {
+  // if all requirememnts are met then submit otherwise display error messages and prevent default
+  if (!checkInputs()) {
+    e.preventDefault();
+  }
+});
 
-  // Remove class grid--1-cols and replace it with grid--2-cols to show both the form input and card with nutritional information on the same row.
-  const inputForm = document.querySelector(".input-form");
-  inputForm.classList.remove("grid--1-cols");
-  inputForm.classList.add("grid--2-cols");
-
-  // Remove leged when the order form is submitted
-  const legend = document.querySelector("legend");
-  legend.classList.add("is-hidden");
-
-  const nameEl = document.querySelector('input[name="fname"]');
-  const phoneEl = document.querySelector('input[name="phone"]');
-  const emailEl = document.querySelector('input[name="email"]');
-  const messageEl = document.querySelector('textarea[name="user-message"]');
-  const selectEl1 = document.querySelector('select[name="fruit-1"]');
-  const selectEl2 = document.querySelector('select[name="fruit-2"]');
-  const selectEl3 = document.querySelector('select[name="fruit-3"]');
-  const quantityEl = document.querySelector('input[name="quantity"]');
-
+function checkInputs() {
   // Extract values from input, textarea, select elements and date & time;
   const nameValue = nameEl.value;
   const phoneValue = phoneEl.value;
@@ -81,50 +82,98 @@ btnEl.addEventListener("click", (event) => {
   const select2Value = selectEl2.value;
   const select3Value = selectEl3.value;
   const quantityValue = Number(quantityEl.value);
+  let isValid = true;
 
-  // Select the elements where you want to inject data
-  const fName = document.querySelector(".yourName");
-  const tel = document.querySelector(".yourPhone");
-  const email = document.querySelector(".yourEmail");
-  const message = document.querySelector(".instructions");
-  const choice1 = document.querySelector(".choice1");
-  const choice2 = document.querySelector(".choice2");
-  const choice3 = document.querySelector(".choice3");
-  const quantity = document.querySelector(".quantity");
-  const dateTime = document.querySelector(".date-time-order");
+  if (nameValue === "") {
+    // show error
+    setErrorFor(nameEl, "First name cannot be blank");
+    isValid = false;
+  }
 
-  // Get the stored VALUE for the numDrinks-ls KEY in localStorage if it exists.
-  // If the numDrinks - ls KEY is missing, then assign 0 to the numDrinks variable.
-  let numDrinks = Number(window.localStorage.getItem("numDrinks-ls")) || 0;
-  // increment the number of drinks.
-  numDrinks += quantityValue;
-  // store the new number of drinks total into localStorage, key=numDrinks-ls
-  localStorage.setItem("numDrinks-ls", `${numDrinks}`);
+  if (emailValue === "") {
+    // show error
+    setErrorFor(emailEl, "Email cannot be blank");
+    isValid = false;
+  } else if (!isEmail(emailValue)) {
+    setErrorFor(emailEl, "Not a valid email");
+    isValid = false;
+  }
 
-  // Inject data
-  fName.textContent = nameValue;
-  tel.textContent = phoneValue;
-  email.textContent = emailValue;
-  message.textContent = messageValue;
-  choice1.textContent = select1Value;
-  choice2.textContent = select2Value;
-  choice3.textContent = select3Value;
-  quantity.textContent = quantityValue;
-  dateTime.textContent = new Intl.DateTimeFormat("en-GB", options).format(
-    lastModified
+  if (phoneValue === "") {
+    // show error
+    setErrorFor(phoneEl, "Phone number cannot be blank");
+  }
+
+  if (quantityValue === "" || quantityValue === 0) {
+    // show error
+    setErrorFor(quantityEl, "Quantity cannot be zero or null");
+  }
+
+  if (
+    nameValue !== "" &&
+    emailValue !== "" &&
+    phoneValue !== "" &&
+    quantityValue >= 1
+  ) {
+    // Remove class is-hidden to show the details card with nutritional information
+    const detailsSection = document.querySelector(".card-details");
+    detailsSection.classList.remove("is-hidden");
+
+    // Remove class grid--1-cols and replace it with grid--2-cols to show both the form input and card with nutritional information on the same row.
+    const inputForm = document.querySelector(".input-form");
+    inputForm.classList.remove("grid--1-cols");
+    inputForm.classList.add("grid--2-cols");
+
+    // Remove leged when the order form is submitted
+    const legend = document.querySelector("legend");
+    legend.classList.add("is-hidden");
+
+    // Inject data
+    fName.textContent = nameValue;
+    email.textContent = emailValue;
+    tel.textContent = phoneValue;
+    quantity.textContent = quantityValue;
+    message.textContent = messageValue;
+    choice1.textContent = select1Value;
+    choice2.textContent = select2Value;
+    choice3.textContent = select3Value;
+    dateTime.textContent = new Intl.DateTimeFormat("en-GB", options).format(
+      lastModified
+    );
+    getNutritionData(data);
+
+    // Clear input fields after submission
+    nameEl.value = "";
+    phoneEl.value = "";
+    emailEl.value = "";
+    messageEl.value = "";
+    selectEl1.value = "";
+    selectEl2.value = "";
+    selectEl3.value = "";
+    quantityEl.value = "";
+
+    // Get the stored VALUE for the numDrinks-ls KEY in localStorage if it exists.
+    // If the numDrinks - ls KEY is missing, then assign 0 to the numDrinks variable.
+    let numDrinks = Number(window.localStorage.getItem("numDrinks-ls")) || 0;
+    // increment the number of drinks.
+    numDrinks += quantityValue;
+    // store the new number of drinks total into localStorage, key=numDrinks-ls
+    localStorage.setItem("numDrinks-ls", `${numDrinks}`);
+  }
+}
+
+function setErrorFor(input, message) {
+  const formControl = input.parentElement.parentElement;
+  const small = formControl.querySelector("small");
+  formControl.className = "form-control error";
+  small.innerText = message;
+}
+
+function isEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
   );
-  getNutritionData(data);
-
-  // Clear input fields after submission
-  nameEl.value = "";
-  phoneEl.value = "";
-  emailEl.value = "";
-  messageEl.value = "";
-  selectEl1.value = "";
-  selectEl2.value = "";
-  selectEl3.value = "";
-  quantityEl.value = "";
-});
+}
 
 const getNutritionData = (fruits) => {
   const carbs = document.querySelector(".carbs");

@@ -642,6 +642,16 @@ form label.top input:required:valid {
   border-left: 5px solid #5d9d72;
 }
 
+.form-control small {
+  display: none;
+  font-size: 1.6rem;
+}
+
+.form-control.error small {
+  display: block;
+  color: #cf711f;
+}
+
 .thankyou-message-section {
   text-align: center;
   margin-bottom: 9.6rem;
@@ -685,7 +695,7 @@ form label.top input:required:valid {
 }
 
 .card-details {
-  max-height: 89.35rem;
+  max-height: 95.9rem;
   border-radius: 8px;
 }
 
